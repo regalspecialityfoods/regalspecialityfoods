@@ -1,0 +1,79 @@
+.HomeScreen {
+  background-color: #f9efee;
+  .container {
+    height: 100dvh;
+    background-image: url("/images/coming_soon.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .top {
+      height: 100%;
+      @include flexCenter;
+      .countDown {
+        display: flex;
+        margin-top: 170px;
+        gap: 8px;
+        .count {
+          background-color: #e32724;
+          text-align: center;
+          height: 70px;
+          width: 70px;
+          @include flexCenter;
+          flex-direction: column;
+          border-radius: 10px;
+
+          color: #f9efee;
+
+          p {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 30px;
+            margin-top: 5px;
+          }
+
+          small {
+            text-align: center;
+            font-size: 13px;
+          }
+          opacity: 0.95;
+        }
+      }
+    }
+
+    @include respond_below(md) {
+      background-image: none;
+      position: relative;
+
+      .top {
+        position: absolute;
+        background-image: url("/images/coming_soon_top1.jpeg");
+        // height: 60%;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        top: 50%;
+        transform: translate(0%, -65%);
+
+        .countDown {
+          margin-top: 300px;
+        }
+      }
+
+      .bottom {
+        background-image: url("/images/coming_soon_bottom1.jpeg");
+        height: 100px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+
+        // transform: translate(0%, -50%);
+      }
+    }
+  }
+}
