@@ -46,7 +46,8 @@ const HomeScreen = () => {
   return (
     <div className={styles.HomeScreen}>
       <CustomContainer>
-        <div className={styles.container}>
+        <div className={styles.cont}></div>
+        {/* <div className={styles.container}>
           <div className={styles.top}>
             <div className={styles.countDown}>
               {Object.entries(timeLeft).map(([key, value]) => (
@@ -58,7 +59,7 @@ const HomeScreen = () => {
             </div>
           </div>
           <div className={styles.bottom} />
-        </div>
+        </div> */}
       </CustomContainer>
     </div>
   );

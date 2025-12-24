@@ -1,5 +1,19 @@
 .HomeScreen {
   background-color: #f9efee;
+  background-color: #f9efee;
+
+  .cont {
+    background-image: url("/images/comin_soon_lg.png");
+    height: 100dvh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include respond_below(md) {
+      background-image: url("/images/comin_soon_sm.png");
+    }
+  }
+
   .container {
     height: 100dvh;
     background-image: url("/images/coming_soon.jpeg");
