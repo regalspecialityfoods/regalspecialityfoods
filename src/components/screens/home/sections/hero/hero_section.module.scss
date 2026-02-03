@@ -1,5 +1,5 @@
 .HeroSection {
-  height: 100dvh;
+  //   height: 100dvh;
   max-width: 100dvw;
   overflow: hidden;
   background-image: url("/images/hero.webp");
@@ -13,7 +13,9 @@
     grid-template-columns: 2fr 50%;
 
     .right {
-      height: 100dvh;
+      //   height: 90dvh;
+      height: 100vh;
+      //   background-color: red;
       display: flex;
       justify-content: center;
       flex-direction: column;

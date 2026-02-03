@@ -13,9 +13,9 @@ const ProductImageSection = () => {
             <Image src="/images/prod.png" alt="prod" fluid />
           </div>
 
-          <div className={styles.right} data-aos="fade-left">
+          <div className={styles.right}>
             <div className={styles.rCont}>
-              <p>
+              <p data-aos="fade-left" data-aos-delay="100">
                 <span>It&apos;s About You</span>
                 is thoughtfully crafted for everyday nourishment. Blending
                 wholesome millets, cereals, pulses & milk solids with carefully
@@ -23,11 +23,19 @@ const ProductImageSection = () => {
                 life stages—men, women and children—through refreshing balanced
                 nutrition.
               </p>
-              <div className={styles.form} data-aos-delay="100">
+              <div
+                className={styles.form}
+                data-aos="fade-left"
+                data-aos-delay="100"
+              >
                 FORMULATED TO SUPPORT
               </div>
 
-              <div className={styles.bot} data-aos-delay="200">
+              <div
+                className={styles.bot}
+                data-aos="fade-left"
+                data-aos-delay="150"
+              >
                 <div className={styles.lt}>
                   Focus &<br />
                   learning
