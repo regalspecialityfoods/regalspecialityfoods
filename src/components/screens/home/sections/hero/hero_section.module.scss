@@ -1,0 +1,89 @@
+.HeroSection {
+  height: 100dvh;
+  max-width: 100dvw;
+  overflow: hidden;
+  background-image: url("/images/hero.webp");
+  //   background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #eaece9;
+
+  .cont {
+    display: grid;
+    grid-template-columns: 2fr 50%;
+
+    .right {
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+
+      .bg {
+        position: absolute;
+        height: 80%;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        background-image: url("/logo/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+      }
+
+      h1 {
+        font-family: "FarmHouse", sans-serif;
+        font-weight: 400;
+        font-size: 70px;
+        letter-spacing: 2px;
+        z-index: 10;
+      }
+
+      .nat {
+        max-width: 450px;
+        z-index: 10;
+        margin-left: 70px;
+        margin-top: -40px;
+
+        h2 {
+          color: green;
+          font-size: 80px;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    background-size: 120%;
+
+    .cont {
+      grid-template-columns: 1fr 100%;
+
+      .right {
+        margin-top: 100px;
+
+        text-align: center;
+        padding: 40px;
+
+        .bg {
+          height: 50%;
+        }
+
+        h1 {
+          font-size: 60px;
+        }
+
+        h2 {
+          font-size: 60px;
+        }
+
+        .nat {
+          margin-left: 0;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}

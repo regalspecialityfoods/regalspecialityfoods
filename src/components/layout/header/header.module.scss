@@ -1,0 +1,56 @@
+.Header {
+  background-color: $color-accent1;
+
+  .container {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navLg {
+      * {
+        margin: 0 !important;
+      }
+      ul {
+        display: flex;
+
+        padding: 0;
+
+        gap: 48px;
+
+        .navItem {
+          list-style: none;
+        }
+      }
+    }
+
+    .menu {
+      display: none;
+      svg {
+        font-size: 28px;
+        cursor: pointer;
+        color: $color-primary1;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+          font-size: 30px;
+        }
+      }
+    }
+
+    @include respond-below(md) {
+      .navLg {
+        display: none;
+      }
+
+      .sm {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+      }
+    }
+  }
+}
