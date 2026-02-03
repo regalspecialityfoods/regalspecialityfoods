@@ -23,9 +23,11 @@ const ProductImageSection = () => {
                 life stages—men, women and children—through refreshing balanced
                 nutrition.
               </p>
-              <div className={styles.form}>FORMULATED TO SUPPORT</div>
+              <div className={styles.form} data-aos-delay="100">
+                FORMULATED TO SUPPORT
+              </div>
 
-              <div className={styles.bot}>
+              <div className={styles.bot} data-aos-delay="200">
                 <div className={styles.lt}>
                   Focus &<br />
                   learning
