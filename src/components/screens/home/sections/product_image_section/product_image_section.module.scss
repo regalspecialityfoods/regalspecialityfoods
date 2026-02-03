@@ -1,0 +1,73 @@
+.ProductImageSection {
+  background-color: #f7cfcf;
+  height: 100dvh;
+
+  .wrap {
+    display: grid;
+    grid-template-columns: 2fr 50%;
+
+    .right {
+      @include flexCenter;
+
+      .rCont {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+          max-width: 450px;
+          span {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Brownist;
+            color: #7a1238;
+            margin-right: 10px;
+            letter-spacing: 1px;
+          }
+        }
+
+        .form {
+          width: 580px;
+          font-size: 34px;
+          color: #7a1238;
+          letter-spacing: 6px;
+          font-weight: 400;
+        }
+
+        .bot {
+          width: 450px;
+          height: 180px;
+          margin-top: 20px;
+          position: relative;
+          > div {
+            position: absolute;
+            font-family: ChickenRice;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 28px;
+
+            &.lt {
+              top: 0;
+              left: 0;
+            }
+
+            &.rt {
+              top: 0;
+              right: 0;
+            }
+
+            &.lb {
+              bottom: 0;
+              left: 0;
+            }
+
+            &.rb {
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

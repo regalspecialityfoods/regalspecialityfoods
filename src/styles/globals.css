@@ -13,6 +13,18 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Brownist";
+  src: url("/fonts/Brownist.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ChickenRice";
+  src: url("/fonts/Chicken Rice.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   font-family: "MainFont", sans-serif;
