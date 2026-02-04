@@ -25,8 +25,8 @@ const ProductImageSection = ({ page }) => {
                 is thoughtfully crafted for everyday nourishment. Blending
                 wholesome millets, cereals, pulses & milk solids with carefully
                 selected herbs, each formula is designed to support different
-                life stages—men, women and children—through refreshing balanced
-                nutrition.
+                life stages -Toddler, Teen, Adult - through a revitalising
+                millet beverage blend.
               </p>
               {/* <div
                 className={styles.form}
