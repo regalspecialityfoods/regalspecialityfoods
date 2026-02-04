@@ -6,10 +6,11 @@ import ProductImageSection from "./sections/product_image_section/product_image_
 const HomeScreen = () => {
   return (
     <div className={styles.HomeScreen}>
-      <HeroSection page={1} />
-      <HeroSection page={2} />
       <HeroSection page={3} noImg />
       <HeroSection page={4} noImg />
+      {/* <HeroSection page={1} />
+      <HeroSection page={2} /> */}
+
       <ProductImageSection page={1} />
       <ProductImageSection page={2} />
       <ProductImageSection page={3} />
