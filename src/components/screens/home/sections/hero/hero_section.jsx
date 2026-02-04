@@ -26,7 +26,7 @@ const HeroSection = ({ page, noImg }) => {
           <div className={styles.right}>
             <div className={styles.bg}></div>
             <h1 data-aos="fade-left" data-aos-delay="200">
-              Fueling Famlies
+              Fueling Families
             </h1>
             <div className={styles.nat}>
               <h2 data-aos="fade-right" data-aos-delay="200">
