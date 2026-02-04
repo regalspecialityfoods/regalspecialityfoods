@@ -3,7 +3,7 @@ import styles from "./hero_section.module.scss";
 import { Image } from "react-bootstrap";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 
-const HeroSection = ({ page }) => {
+const HeroSection = ({ page, noImg }) => {
   return (
     <section
       className={styles.HeroSection}
@@ -18,7 +18,9 @@ const HeroSection = ({ page }) => {
             data-aos="fade-right"
             data-aos-duration="500"
           >
-            <Image src={`/images/page${page}/hero.png`} alt="hero" />
+            {!noImg && (
+              <Image src={`/images/page${page}/hero.png`} alt="hero" />
+            )}
           </div>
 
           <div className={styles.right}>

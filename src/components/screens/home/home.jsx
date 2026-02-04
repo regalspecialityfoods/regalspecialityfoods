@@ -8,7 +8,8 @@ const HomeScreen = () => {
     <div className={styles.HomeScreen}>
       <HeroSection page={1} />
       <HeroSection page={2} />
-      {/* <HeroSection page={3} /> */}
+      <HeroSection page={3} noImg />
+      <HeroSection page={4} noImg />
       <ProductImageSection page={1} />
       <ProductImageSection page={2} />
       <ProductImageSection page={3} />
