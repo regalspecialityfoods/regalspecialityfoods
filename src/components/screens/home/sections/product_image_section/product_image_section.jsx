@@ -4,13 +4,18 @@ import styles from "./product_image_section.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image } from "react-bootstrap";
 
-const ProductImageSection = () => {
+const ProductImageSection = ({ page }) => {
   return (
-    <section className={styles.ProductImageSection}>
+    <section
+      className={styles.ProductImageSection}
+      style={{
+        backgroundImage: `url('/images/prod${page}/bg.png')`,
+      }}
+    >
       <CustomContainer>
         <div className={styles.wrap}>
           <div className={styles.left} data-aos="fade-right">
-            <Image src="/images/prod.png" alt="prod" fluid />
+            <Image src={`/images/prod${page}/prod.png`} alt="prod" fluid />
           </div>
 
           <div className={styles.right}>
@@ -23,20 +28,21 @@ const ProductImageSection = () => {
                 life stages—men, women and children—through refreshing balanced
                 nutrition.
               </p>
-              <div
+              {/* <div
                 className={styles.form}
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
                 FORMULATED TO SUPPORT
-              </div>
+              </div> */}
 
               <div
                 className={styles.bot}
                 data-aos="fade-left"
                 data-aos-delay="150"
               >
-                <div className={styles.lt}>
+                <Image src={`/images/prod${page}/arr.png`} alt="xx" fluid />
+                {/* <div className={styles.lt}>
                   Focus &<br />
                   learning
                 </div>
@@ -54,7 +60,7 @@ const ProductImageSection = () => {
                   Everyday
                   <br />
                   wellness
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

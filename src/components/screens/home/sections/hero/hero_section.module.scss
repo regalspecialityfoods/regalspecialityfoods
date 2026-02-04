@@ -1,20 +1,43 @@
 .HeroSection {
-  //   height: 100dvh;
+  height: 100vh;
   max-width: 100dvw;
   overflow: hidden;
-  background-image: url("/images/hero.webp");
+  background-size: cover;
+  background-position: center;
+  // background-color: red;
+  // background-image: url("/images/hero.webp");
   //   background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #eaece9;
+  // background-repeat: no-repeat;
+  // background-color: #eaece9;
 
   .cont {
-    display: grid;
-    grid-template-columns: 2fr 50%;
+    // display: grid;
+    // width: 100%;
+    // grid-template-columns: 2fr 40%;
+
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: 45%;
+    }
+
+    .left {
+      // display: flex;
+      justify-content: flex-end;
+      // background-color: red;
+      // padding: 100px 20px 0 0;
+
+      img {
+        // height: 90dvh;
+        // background-color: blue;
+
+        width: 100%;
+      }
+    }
 
     .right {
-      //   height: 90dvh;
       height: 100vh;
+      // height: 100vh;
       //   background-color: red;
       display: flex;
       justify-content: center;
@@ -28,10 +51,10 @@
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 1;
-        background-image: url("/logo/logo.png");
+        background-image: url("/images/logo.png");
         background-size: contain;
         background-repeat: no-repeat;
-        opacity: 0.1;
+        opacity: 0.5;
       }
 
       h1 {
@@ -42,8 +65,14 @@
         z-index: 10;
       }
 
+      p {
+        font-size: 14px;
+      }
+
       .nat {
-        max-width: 450px;
+        max-width: 500px;
+        font-weight: 100;
+        // letter-spacing: 1px;
         z-index: 10;
         margin-left: 70px;
         margin-top: -40px;
@@ -58,12 +87,19 @@
   }
 
   @include respond-below(md) {
-    background-size: 120%;
+    background-size: 100%;
+    // background-size: cover;
+    height: fit-content;
 
     .cont {
-      grid-template-columns: 1fr 100%;
+      flex-direction: column;
+      > div {
+        width: 100%;
+      }
 
       .right {
+        height: fit-content;
+
         margin-top: 100px;
 
         text-align: center;

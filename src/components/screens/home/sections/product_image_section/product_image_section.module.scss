@@ -1,12 +1,18 @@
 .ProductImageSection {
-  background-color: #f7cfcf;
+  // background-color: #f7cfcf;
   max-width: 100vdw;
   overflow: hidden;
   height: 100dvh;
+  display: flex;
+  align-items: center;
 
   .wrap {
     display: grid;
     grid-template-columns: 2fr 50%;
+
+    .left {
+      @include flexCenter;
+    }
 
     .right {
       @include flexCenter;
@@ -14,10 +20,12 @@
       .rCont {
         @include flexCenter;
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
 
         p {
-          max-width: 450px;
+          max-width: 500px;
+          font-size: 14px;
           span {
             font-size: 30px;
             font-weight: bold;
@@ -37,12 +45,15 @@
         }
 
         .bot {
-          width: 450px;
-          height: 180px;
+          // width: 700px;
+          // height: 180px;
+          img {
+            max-width: 460px;
+          }
           margin-top: 20px;
           position: relative;
 
-          background-image: url("/images/arr.png");
+          // background-image: url("/images/arr.png");
           background-size: 65%;
           background-repeat: no-repeat;
           background-position: 70px center;
