@@ -28,10 +28,13 @@ const ProductImageSection = ({ page = 1 }) => {
     >
       <CustomContainer>
         <div className={styles.wrap}>
-          <div className={styles.left} data-aos="fade-right">
+          <div className={styles.left}>
             <Carousel
-              interval={5000}
-              // pause="hover"
+              interval={4000}
+              pause="hover"
+              controls={false}
+              indicators={false}
+              fade
               draggable
               onSlide={(n) => {
                 setActiveIndex(n);
@@ -53,7 +56,7 @@ const ProductImageSection = ({ page = 1 }) => {
 
           <div className={styles.right}>
             <div className={styles.rCont}>
-              <p data-aos="fade-left" data-aos-delay="100">
+              <p>
                 <span>It&apos;s About You</span>
                 is thoughtfully crafted for everyday nourishment. Blending
                 wholesome millets, cereals, pulses & milk solids with carefully
@@ -62,14 +65,11 @@ const ProductImageSection = ({ page = 1 }) => {
                 millet beverage blend.
               </p>
 
-              <div
-                className={styles.bot}
-                data-aos="fade-left"
-                data-aos-delay="150"
-              >
+              <div className={styles.bot}>
                 <Image
                   src={`/images/${products[activeIndex].id}/arr.png`}
-                  alt="xx"
+                  // src={`/images/prod1/arr.png`}
+                  alt="product"
                   fluid
                   key={activeIndex}
                   className={styles.botImg}

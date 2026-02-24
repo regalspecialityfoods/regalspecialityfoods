@@ -2,9 +2,11 @@
   // background-color: #f7cfcf;
   max-width: 100vdw;
   overflow: hidden;
-  height: 120vh !important;
+  min-height: 120vh !important;
+  max-height: 120vh !important;
   display: flex;
   align-items: center;
+  // animation: 0.25s bgAmin ease-in-out;
 
   .wrap {
     display: grid;
@@ -24,6 +26,9 @@
         gap: 10px;
 
         p {
+          // background-color: red;
+
+          // height: 200px;
           max-width: 500px;
           font-size: 14px;
           letter-spacing: 0.5px;
@@ -50,12 +55,14 @@
         .bot {
           // width: 700px;
           // height: 180px;
+          height: 250px;
           img {
-            max-width: 430px;
+            // max-width: 430px;
 
+            height: 100%;
             // width: 0;
             animation: 0.25s anim ease-in-out;
-            // transform-origin: bottom;
+            // transform-origin: left;
           }
           margin-top: 40px;
           position: relative;
@@ -99,17 +106,29 @@
 
   @keyframes anim {
     0% {
+      // opacity: 0;
       transform: scale(0);
     }
 
     100% {
+      // opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes bgAmin {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
   @include respond-below(md) {
     padding: 100px 0;
-    height: fit-content;
+    min-width: fit-content !important;
+    max-height: fit-content !important;
     padding-bottom: 100px;
     .wrap {
       display: block;

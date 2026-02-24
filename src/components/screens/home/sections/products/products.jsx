@@ -57,7 +57,7 @@ const ProductsSection = () => {
     <CustomSection className={styles.ProductsSection}>
       <SectionHeading
         head={"Our Products"}
-        caption={` The Visual Composer drag-and-drop page builder is packed with all Elated
+        caption={`The Visual Composer drag-and-drop page builder is packed with all Elated
         Themes. Setting up your website and creating pages full of stunning
         content.`}
       />
