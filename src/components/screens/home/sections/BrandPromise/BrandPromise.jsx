@@ -30,7 +30,7 @@ const PromiseItem = ({ index }) => {
 
 const BrandPromise = () => {
   return (
-    <div className={styles.BrandPromise}>
+    <section className={styles.BrandPromise}>
       <SectionHeading
         head={"Brand Promise"}
         caption={
@@ -61,7 +61,7 @@ const BrandPromise = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
