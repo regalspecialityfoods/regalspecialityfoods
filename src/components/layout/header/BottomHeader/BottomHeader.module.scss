@@ -1,0 +1,48 @@
+.BottomHeader {
+  background-color: $color-accent1;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    > div {
+      width: 33%;
+
+      &.search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        svg {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .wrap {
+      > div {
+        width: 50%;
+        &.empty {
+          display: none;
+        }
+
+        &.search {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

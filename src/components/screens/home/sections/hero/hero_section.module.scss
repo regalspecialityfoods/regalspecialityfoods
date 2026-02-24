@@ -88,7 +88,7 @@
 
   @include respond-below(md) {
     background-size: 100%;
-    // background-size: cover;
+    background-size: cover;
     height: fit-content;
 
     .cont {
