@@ -1,21 +1,53 @@
 import React, { useState } from "react";
 import styles from "./ProductCard.module.scss";
 import { Image } from "react-bootstrap";
-import { StarFill, StarHalf, Star } from "react-bootstrap-icons";
+import { StarFill, StarHalf, Star, Check, Check2Circle } from "react-bootstrap-icons";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 
 const ProductCard = ({ index = 0, product }) => {
+  const { addToCart, cartItems } = useCart();
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
   const discountPercentage =
     selectedSize.originalPrice > selectedSize.currentPrice
       ? Math.round(
-          ((selectedSize.originalPrice - selectedSize.currentPrice) /
-            selectedSize.originalPrice) *
-            100,
-        )
+        ((selectedSize.originalPrice - selectedSize.currentPrice) /
+          selectedSize.originalPrice) *
+        100,
+      )
       : 0;
+
+  const cartItem = cartItems.find(item => item.productId === product.id && item.sizeLabel === selectedSize.label);
+  const isAddedToCart = !!cartItem;
+  const isLimitReached = cartItem && cartItem.quantity >= (cartItem.maxPerOrder || 999);
+
+  const getButtonTextAndvariant = () => {
+    if (product.availability === "Out of Stock") {
+      return {
+        text: "Out of Stock",
+        variant: 4
+      }
+    }
+    if (isLimitReached) {
+      return {
+        text: <>Limit Reached <Check2Circle size={18} /></>,
+        variant: 4
+      }
+    }
+    if (isAddedToCart) {
+      return {
+        text: <>Added To Cart <Check2Circle size={18} /></>,
+        variant: 3
+      }
+    }
+    return {
+      text: "Add To Cart",
+      variant: 1
+    }
+  }
+
 
   const renderStars = (rating = 4.5) => {
     const stars = [];
@@ -81,9 +113,8 @@ const ProductCard = ({ index = 0, product }) => {
             {product.sizes.map((size, i) => (
               <button
                 key={i}
-                className={`${styles.sizeBtn} ${
-                  selectedSize.label === size.label ? styles.activeSize : ""
-                }`}
+                className={`${styles.sizeBtn} ${selectedSize.label === size.label ? styles.activeSize : ""
+                  }`}
                 onClick={(e) => {
                   e.preventDefault();
 
@@ -99,11 +130,14 @@ const ProductCard = ({ index = 0, product }) => {
         <br />
         <CustomButton
           fullWidth
+          disabled={product.availability === "Out of Stock" || isLimitReached || isAddedToCart}
           onClick={(e) => {
             e.preventDefault();
+            addToCart(product, selectedSize);
           }}
+          variant={getButtonTextAndvariant().variant}
         >
-          Add To Cart
+          {getButtonTextAndvariant().text}
         </CustomButton>
       </div>
     </Link>

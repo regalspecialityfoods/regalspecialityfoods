@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Image } from "react-bootstrap";
+import { Image, Offcanvas } from "react-bootstrap";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import styles from "./product_description.module.scss";
 import { Check2Circle } from "react-bootstrap-icons";
+import { useCart } from "@/context/CartContext";
 
 const ProductDescriptionScreen = ({ product }) => {
-
+  const { addToCart, cartItems } = useCart();
 
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
@@ -33,6 +34,8 @@ const ProductDescriptionScreen = ({ product }) => {
 
   return (
     <div className={styles.ProductDescriptionScreen}>
+
+      <Offcanvas />
       <CustomContainer>
         <div className={styles.topSection}>
           {/* LEFT IMAGE */}
@@ -96,9 +99,52 @@ const ProductDescriptionScreen = ({ product }) => {
 
             {/* Actions: Quantity & Add to Cart */}
             <div className={styles.actionsRow}>
-              <CustomButton fullWidth onClick={() => console.log("Added to cart", { product, selectedSize, quantity })}>
-                Add To Cart
-              </CustomButton>
+              {(() => {
+                const cartItem = cartItems.find(
+                  (item) =>
+                    item.productId === product.id &&
+                    item.sizeLabel === selectedSize.label
+                );
+                const isOutOfStock = product.availability === "Out of Stock";
+                const isLimitReached = cartItem && cartItem.quantity >= (cartItem.maxPerOrder || 999);
+
+                let buttonText = "Add To Cart";
+                let buttonVariant = 1;
+                let isDisabled = false;
+
+                if (isOutOfStock) {
+                  buttonText = "Out of Stock";
+                  buttonVariant = 4;
+                  isDisabled = true;
+                } else if (isLimitReached) {
+                  buttonText = (
+                    <>
+                      Limit Reached <Check2Circle size={18} />
+                    </>
+                  );
+                  buttonVariant = 4;
+                  isDisabled = true;
+                } else if (cartItem) {
+                  buttonText = (
+                    <>
+                      Added To Cart <Check2Circle size={18} />
+                    </>
+                  );
+                  buttonVariant = 3;
+                  isDisabled = true;
+                }
+
+                return (
+                  <CustomButton
+                    fullWidth
+                    disabled={isDisabled}
+                    variant={buttonVariant}
+                    onClick={() => addToCart(product, selectedSize)}
+                  >
+                    {buttonText}
+                  </CustomButton>
+                );
+              })()}
             </div>
           </div>
         </div>

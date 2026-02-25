@@ -10,6 +10,9 @@ import styles from "../styles/Home.module.scss";
 import fonts from "@/styles/fonts";
 import { ToastContainer } from "react-toastify";
 import Layout from "@/components/layout/layout";
+import { CartProvider } from "@/context/CartContext";
+import FloatingCartButton from "@/components/cart/FloatingCartButton";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -34,10 +37,14 @@ export default function App({ Component, pageProps }) {
 
   return (
     <main className={`${styles.main}`}>
-      <Layout>
-        <Component {...pageProps} />
-        <ToastContainer position="bottom-right" />
-      </Layout>
+      <CartProvider>
+        <Layout>
+          <Component {...pageProps} />
+          <ToastContainer position="bottom-right" />
+        </Layout>
+        <FloatingCartButton />
+        <CartDrawer />
+      </CartProvider>
     </main>
   );
 }

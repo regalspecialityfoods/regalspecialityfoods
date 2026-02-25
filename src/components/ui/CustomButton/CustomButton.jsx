@@ -3,9 +3,10 @@ import styles from "./CustomButton.module.scss";
 
 const CustomButton = ({
   children,
-  onClick = () => {},
+  onClick = () => { },
   fullWidth,
   variant = 1,
+  disabled = false,
 }) => {
   return (
     <button
@@ -13,6 +14,7 @@ const CustomButton = ({
       ${styles[`v${variant}`]}
       `}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

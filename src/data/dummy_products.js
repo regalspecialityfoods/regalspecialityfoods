@@ -18,9 +18,9 @@ const productCategories = [
           "Balanced millet-based nourishment crafted to support daily energy and active routines.",
 
         sizes: [
-          { label: "200 g", originalPrice: 699, currentPrice: 549 },
-          { label: "454 g", originalPrice: 1299, currentPrice: 1099 },
-          { label: "908 g", originalPrice: 2299, currentPrice: 1999 },
+          { label: "200 g", originalPrice: 699, currentPrice: 549, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1299, currentPrice: 1099, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2299, currentPrice: 1999, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -64,9 +64,9 @@ const productCategories = [
           "Functional herb and cereal blend formulated to support stamina and focus.",
 
         sizes: [
-          { label: "200 g", originalPrice: 749, currentPrice: 599 },
-          { label: "454 g", originalPrice: 1399, currentPrice: 1199 },
-          { label: "908 g", originalPrice: 2399, currentPrice: 2099 },
+          { label: "200 g", originalPrice: 749, currentPrice: 599, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1399, currentPrice: 1199, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2399, currentPrice: 2099, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -108,9 +108,9 @@ const productCategories = [
           "A revitalising beverage designed to complement consistent daily performance.",
 
         sizes: [
-          { label: "200 g", originalPrice: 799, currentPrice: 629 },
-          { label: "454 g", originalPrice: 1499, currentPrice: 1249 },
-          { label: "908 g", originalPrice: 2599, currentPrice: 2199 },
+          { label: "200 g", originalPrice: 799, currentPrice: 629, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -157,9 +157,9 @@ const productCategories = [
           "Gentle, holistic nourishment designed to support everyday wellness and vitality.",
 
         sizes: [
-          { label: "200 g", originalPrice: 699, currentPrice: 559 },
-          { label: "454 g", originalPrice: 1299, currentPrice: 1099 },
-          { label: "908 g", originalPrice: 2299, currentPrice: 1999 },
+          { label: "200 g", originalPrice: 699, currentPrice: 559, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1299, currentPrice: 1099, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2299, currentPrice: 1999, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -200,9 +200,9 @@ const productCategories = [
           "A thoughtfully crafted blend supporting daily radiance and nourishment.",
 
         sizes: [
-          { label: "200 g", originalPrice: 749, currentPrice: 599 },
-          { label: "454 g", originalPrice: 1399, currentPrice: 1199 },
-          { label: "908 g", originalPrice: 2399, currentPrice: 2099 },
+          { label: "200 g", originalPrice: 749, currentPrice: 599, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1399, currentPrice: 1199, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2399, currentPrice: 2099, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -243,9 +243,9 @@ const productCategories = [
           "Millet and herb-based beverage supporting balance and sustained energy.",
 
         sizes: [
-          { label: "200 g", originalPrice: 799, currentPrice: 649 },
-          { label: "454 g", originalPrice: 1499, currentPrice: 1249 },
-          { label: "908 g", originalPrice: 2599, currentPrice: 2199 },
+          { label: "200 g", originalPrice: 799, currentPrice: 649, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
         ],
 
         keyBenefits: [
@@ -291,9 +291,9 @@ const productCategories = [
           "Gentle, nutrient-rich blend designed to support healthy growth.",
 
         sizes: [
-          { label: "200 g", originalPrice: 649, currentPrice: 499 },
-          { label: "454 g", originalPrice: 1199, currentPrice: 999 },
-          { label: "908 g", originalPrice: 2199, currentPrice: 1899 },
+          { label: "200 g", originalPrice: 649, currentPrice: 499, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1199, currentPrice: 999, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2199, currentPrice: 1899, maxPerOrder: 5 },
         ],
 
         keyBenefits: ["Supports growth", "Mild taste", "Easy digestion"],
