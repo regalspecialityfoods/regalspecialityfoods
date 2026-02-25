@@ -6,53 +6,9 @@ import ProductCard from "@/components/common/ProductCard/ProductCard";
 import { Col, Row } from "react-bootstrap";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { ArrowRight } from "react-bootstrap-icons";
+import { allProducts, productCategories } from "@/data/dummy_products";
 
 const ProductsSection = () => {
-  const productCategories = [
-    {
-      name: "For Men",
-      products: [
-        {
-          id: "xscx",
-        },
-        {
-          id: "xaex",
-        },
-        {
-          id: "xsaex",
-        },
-      ],
-    },
-    {
-      name: "For Women",
-      products: [
-        {
-          id: "xqqx",
-        },
-        {
-          id: "rrxx",
-        },
-        {
-          id: "rrxxxxx",
-        },
-      ],
-    },
-    {
-      name: "For Children",
-      products: [
-        {
-          id: "xsrx",
-        },
-        {
-          id: "xrgx",
-        },
-        {
-          id: "xreegx",
-        },
-      ],
-    },
-  ];
-
   return (
     <CustomSection className={styles.ProductsSection}>
       <SectionHeading
