@@ -1,0 +1,37 @@
+.PackshotSection {
+    height: 100dvh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .packshotWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 60px;
+
+        .mid {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            justify-content: space-between;
+            // border: 1px solid red;
+
+            .about {
+                transform: scale(1.15);
+            }
+
+        }
+
+        .prod {
+            transform: scale(1.65) translate(0px, -30px);
+
+        }
+    }
+
+}
