@@ -20,6 +20,8 @@
   position: sticky;
   position: relative;
 
+
+
   .stock {
     position: absolute;
     top: 20px;
@@ -271,7 +273,7 @@
   }
 
   .imageBox {
-    padding: 40px;
+    // padding: 40px;
   }
 }
 
@@ -284,9 +286,10 @@
     grid-template-columns: 1fr;
   }
 
-  .imageBox {
-    position: static;
+  .bottomSection {
+    grid-template-columns: 1fr;
   }
+
 
   .infoBox h1 {
     font-size: 32px;
