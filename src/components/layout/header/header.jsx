@@ -1,5 +1,6 @@
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import { Image } from "react-bootstrap";
@@ -11,6 +12,7 @@ import HeaderDrawer from "./header_drawer/header_drawer";
 import BottomHeader from "./BottomHeader/BottomHeader";
 
 const Header = () => {
+  const router = useRouter();
   const [showDrawer, setShowDrawer] = useState(false);
 
   return (
@@ -28,7 +30,7 @@ const Header = () => {
                 {PAGES.map((page) => {
                   if (!page.hidden) {
                     return (
-                      <li key={page.id} className={styles.navItem}>
+                      <li key={page.id} className={`${styles.navItem} ${(page.href === "/" ? router.pathname === "/" : router.pathname.startsWith(page.href)) ? styles.active : ""}`}>
                         <Link href={page.href}>{page.name}</Link>
                       </li>
                     );

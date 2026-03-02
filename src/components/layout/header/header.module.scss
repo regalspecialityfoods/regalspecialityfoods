@@ -12,6 +12,7 @@
       * {
         margin: 0 !important;
       }
+
       ul {
         display: flex;
 
@@ -21,12 +22,29 @@
 
         .navItem {
           list-style: none;
+
+          &.active {
+            a {
+              color: $color-primary1;
+              font-weight: 600;
+              border-bottom: 2px solid $color-primary1;
+            }
+          }
+
+          a {
+            transition: all 0.3s ease;
+
+            &:hover {
+              color: $color-primary1;
+            }
+          }
         }
       }
     }
 
     .menu {
       display: none;
+
       svg {
         font-size: 28px;
         cursor: pointer;

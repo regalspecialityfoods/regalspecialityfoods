@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { Image, Offcanvas } from "react-bootstrap";
 import styles from "./header_drawer.module.scss";
 import { PAGES } from "@/constants/constants";
@@ -6,6 +7,7 @@ import Link from "next/link";
 import SocialMedia from "@/components/ui/social_media/social_media";
 
 const HeaderDrawer = ({ show, setShow }) => {
+  const router = useRouter();
   const handleClose = () => {
     setShow(false);
   };
@@ -22,8 +24,12 @@ const HeaderDrawer = ({ show, setShow }) => {
               {PAGES.map((page) => {
                 if (!page.hidden) {
                   return (
-                    <li key={page.id} className={styles.navItem}>
-                      <Link href={page.href}>{page.name}</Link>
+                    <li key={page.id} className={`${styles.navItem} ${(page.href === "/" ? router.pathname === "/" : router.pathname.startsWith(page.href)) ? styles.active : ""}`}>
+                      <Link href={page.href}
+                        onClick={() => {
+                          handleClose()
+                        }}
+                      >{page.name}</Link>
                     </li>
                   );
                 }

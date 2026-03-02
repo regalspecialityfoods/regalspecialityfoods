@@ -11,20 +11,27 @@ export const PAGES = [
     href: "/about",
   },
   {
-    id: "products",
-    name: "Products",
-    href: "/products",
+    id: "about_brand",
+    name: "It's About You",
+    href: "/its-about-you",
+  },
+  {
+    id: "shop",
+    name: "Shop",
+    href: "/shop",
   },
   {
     id: "blogs",
     name: "Blogs",
-    href: "/blogs",
+    href: "/blog",
   },
+
   {
-    id: "contact",
-    name: "Contact Us",
-    href: "/contact",
+    id: "work_with_us",
+    name: "Work With Us",
+    href: "/work-with-us",
   },
+
 ];
 
 export const SOCIAL_MEDIA = [

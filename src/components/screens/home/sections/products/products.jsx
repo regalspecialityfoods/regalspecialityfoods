@@ -6,7 +6,7 @@ import ProductCard from "@/components/common/ProductCard/ProductCard";
 import { Col, Row } from "react-bootstrap";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { ArrowRight } from "react-bootstrap-icons";
-import { allProducts, productCategories } from "@/data/dummy_products";
+import { productCategories } from "@/data/dummy_products";
 
 const ProductsSection = () => {
   return (

@@ -8,7 +8,7 @@ const productCategories = [
         name: "Vitality Blend",
         category: "Men",
         rating: 4.5,
-        image: "/images/prod1/prod.png",
+        image: "/images/products/men/prod1.png",
         tags: ["Bestseller", "Clean Label"],
 
         overview:
@@ -54,7 +54,8 @@ const productCategories = [
         name: "Performance Blend",
         category: "Men",
         rating: 4.3,
-        image: "/images/prod2/prod.png",
+        image: "/images/products/men/prod2.png",
+
         tags: ["New"],
 
         overview:
@@ -92,49 +93,49 @@ const productCategories = [
         availability: "Out of Stock",
       },
 
-      {
-        id: "men-endurance-03",
-        sku: "RSF-MEN-END-03",
-        name: "Endurance Blend",
-        category: "Men",
-        rating: 4.6,
-        image: "/images/prod3/prod.png",
-        tags: ["Premium"],
+      // {
+      //   id: "men-endurance-03",
+      //   sku: "RSF-MEN-END-03",
+      //   name: "Endurance Blend",
+      //   category: "Men",
+      //   rating: 4.6,
+      //   image: "/images/prod3/prod.png",
+      //   tags: ["Premium"],
 
-        overview:
-          "A nutrient-dense blend crafted to support long-lasting energy and daily vitality.",
+      //   overview:
+      //     "A nutrient-dense blend crafted to support long-lasting energy and daily vitality.",
 
-        shortDescription:
-          "A revitalising beverage designed to complement consistent daily performance.",
+      //   shortDescription:
+      //     "A revitalising beverage designed to complement consistent daily performance.",
 
-        sizes: [
-          { label: "200 g", originalPrice: 799, currentPrice: 629, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
-        ],
+      //   sizes: [
+      //     { label: "200 g", originalPrice: 799, currentPrice: 629, maxPerOrder: 5 },
+      //     { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
+      //     { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
+      //   ],
 
-        keyBenefits: [
-          "Supports stamina",
-          "Rich whole-grain base",
-          "Suitable for daily wellness routines",
-        ],
+      //   keyBenefits: [
+      //     "Supports stamina",
+      //     "Rich whole-grain base",
+      //     "Suitable for daily wellness routines",
+      //   ],
 
-        ingredients:
-          "Millets, barley, natural extracts, plant-based micronutrients.",
+      //   ingredients:
+      //     "Millets, barley, natural extracts, plant-based micronutrients.",
 
-        nutritionalHighlights: [
-          "High fiber content",
-          "Balanced energy release",
-          "Naturally derived nutrients",
-        ],
+      //   nutritionalHighlights: [
+      //     "High fiber content",
+      //     "Balanced energy release",
+      //     "Naturally derived nutrients",
+      //   ],
 
-        preparation: {
-          hot: "Stir into warm water or milk until smooth.",
-          cold: "Shake well with chilled milk and serve.",
-        },
+      //   preparation: {
+      //     hot: "Stir into warm water or milk until smooth.",
+      //     cold: "Shake well with chilled milk and serve.",
+      //   },
 
-        availability: "Limited Stock",
-      },
+      //   availability: "Limited Stock",
+      // },
     ],
   },
 
@@ -147,7 +148,7 @@ const productCategories = [
         name: "Balance Blend",
         category: "Women",
         rating: 4.7,
-        image: "/images/prod1/prod.png",
+        image: "/images/products/womens/prod1.png",
         tags: ["Bestseller"],
 
         overview:
@@ -190,7 +191,7 @@ const productCategories = [
         name: "Glow Blend",
         category: "Women",
         rating: 4.4,
-        image: "/images/prod2/prod.png",
+        image: "/images/products/womens/prod2.png",
         tags: ["New"],
 
         overview:
@@ -227,48 +228,48 @@ const productCategories = [
         availability: "In Stock",
       },
 
-      {
-        id: "women-harmony-03",
-        sku: "RSF-WOM-HAR-03",
-        name: "Harmony Blend",
-        category: "Women",
-        rating: 4.6,
-        image: "/images/prod3/prod.png",
-        tags: ["Premium"],
+      // {
+      //   id: "women-harmony-03",
+      //   sku: "RSF-WOM-HAR-03",
+      //   name: "Harmony Blend",
+      //   category: "Women",
+      //   rating: 4.6,
+      //   image: "/images/prod3/prod.png",
+      //   tags: ["Premium"],
 
-        overview:
-          "A daily nourishment blend created for balance and sustained vitality.",
+      //   overview:
+      //     "A daily nourishment blend created for balance and sustained vitality.",
 
-        shortDescription:
-          "Millet and herb-based beverage supporting balance and sustained energy.",
+      //   shortDescription:
+      //     "Millet and herb-based beverage supporting balance and sustained energy.",
 
-        sizes: [
-          { label: "200 g", originalPrice: 799, currentPrice: 649, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
-        ],
+      //   sizes: [
+      //     { label: "200 g", originalPrice: 799, currentPrice: 649, maxPerOrder: 5 },
+      //     { label: "454 g", originalPrice: 1499, currentPrice: 1249, maxPerOrder: 5 },
+      //     { label: "908 g", originalPrice: 2599, currentPrice: 2199, maxPerOrder: 5 },
+      //   ],
 
-        keyBenefits: [
-          "Supports sustained energy",
-          "Traditional ingredients",
-          "Clean-label formulation",
-        ],
+      //   keyBenefits: [
+      //     "Supports sustained energy",
+      //     "Traditional ingredients",
+      //     "Clean-label formulation",
+      //   ],
 
-        ingredients: "Millets, barley, plant extracts, whole grains.",
+      //   ingredients: "Millets, barley, plant extracts, whole grains.",
 
-        nutritionalHighlights: [
-          "High fiber",
-          "Source of iron",
-          "Balanced nutrients",
-        ],
+      //   nutritionalHighlights: [
+      //     "High fiber",
+      //     "Source of iron",
+      //     "Balanced nutrients",
+      //   ],
 
-        preparation: {
-          hot: "Add to warm milk, stir well.",
-          cold: "Shake with chilled milk.",
-        },
+      //   preparation: {
+      //     hot: "Add to warm milk, stir well.",
+      //     cold: "Shake with chilled milk.",
+      //   },
 
-        availability: "In Stock",
-      },
+      //   availability: "In Stock",
+      // },
     ],
   },
 
@@ -281,7 +282,45 @@ const productCategories = [
         name: "Growth Blend",
         category: "Children",
         rating: 4.8,
-        image: "/images/prod1/prod.png",
+        image: "/images/products/juniors/prod1.png",
+        tags: ["Bestseller"],
+
+        overview:
+          "A gentle, nutrient-rich beverage blend designed to support healthy growth and development.",
+
+        shortDescription:
+          "Gentle, nutrient-rich blend designed to support healthy growth.",
+
+        sizes: [
+          { label: "200 g", originalPrice: 649, currentPrice: 499, maxPerOrder: 5 },
+          { label: "454 g", originalPrice: 1199, currentPrice: 999, maxPerOrder: 5 },
+          { label: "908 g", originalPrice: 2199, currentPrice: 1899, maxPerOrder: 5 },
+        ],
+
+        keyBenefits: ["Supports growth", "Mild taste", "Easy digestion"],
+
+        ingredients: "Millets, whole grains, natural nutrients.",
+
+        nutritionalHighlights: [
+          "High calcium content",
+          "Rich in iron",
+          "No artificial additives",
+        ],
+
+        preparation: {
+          hot: "Mix with warm milk and stir well.",
+          cold: "Shake with chilled milk.",
+        },
+
+        availability: "In Stock",
+      },
+      {
+        id: "kids-growth-02",
+        sku: "RSF-KID-GRO-02",
+        name: "Growth Blend 2",
+        category: "Children",
+        rating: 4.8,
+        image: "/images/products/juniors/prod2.png",
         tags: ["Bestseller"],
 
         overview:

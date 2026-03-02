@@ -38,7 +38,6 @@ const PackshotSection = () => {
                 products.map((prod) => {
                     return (
                         <Carousel.Item key={prod.id}
-
                         >
                             <section
                                 className={styles.PackshotSection}

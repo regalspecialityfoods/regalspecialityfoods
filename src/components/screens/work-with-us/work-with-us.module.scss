@@ -1,0 +1,322 @@
+@import "@/styles/scss/variables";
+@import "@/styles/scss/media_queries";
+@import "@/styles/scss/mixins";
+
+.WorkWithUsScreen {
+    background-color: #fff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+
+    .hero {
+        position: relative;
+        background-color: #000;
+        height: 60vh;
+        min-height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+
+        @include respond-below(md) {
+            height: 40vh;
+            min-height: 350px;
+        }
+
+        .heroImageBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+            }
+        }
+
+        .heroContent {
+            position: relative;
+            z-index: 2;
+
+            h1 {
+                font-family: $font-ChickenRice, sans-serif;
+                font-size: 64px;
+                color: #fff;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+                @include respond-below(md) {
+                    font-size: 42px;
+                }
+            }
+        }
+    }
+
+    .contentSection {
+        padding: 80px 0;
+
+        &.purpose {
+            background: #f9f9f9;
+        }
+
+        .sectionHeader {
+            text-align: center;
+            margin-bottom: 50px;
+
+            .sectionTitle {
+                font-family: $font-FarmHouse, sans-serif;
+                font-size: 36px;
+                color: #000;
+                margin-bottom: 15px;
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50px;
+                    height: 3px;
+                    background-color: $color-primary1;
+                }
+
+                @include respond-below(md) {
+                    font-size: 28px;
+                }
+            }
+
+            .sectionSubtitle {
+                font-size: 18px;
+                color: #666;
+                max-width: 700px;
+                margin: 20px auto 0;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 25px;
+            max-width: 800px;
+        }
+
+        /* Partnership Grid */
+        .partnershipGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .partnershipCard {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid transparent;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                border-top-color: $color-primary1;
+            }
+
+            .cardIcon {
+                font-size: 40px;
+                margin-bottom: 20px;
+                color: $color-primary1;
+
+            }
+
+            h3 {
+                // font-family: $font-ChickenRice, sans-serif;
+                font-size: 20px;
+                // color: $color-primary1;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 15px;
+                color: #666;
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* FAQ List */
+        &.faqSection {
+            background-color: #fcfcfc;
+
+            .faqList {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .faqItem {
+                background: #fff;
+                padding: 30px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+
+                h4 {
+                    // font-family: $font-FarmHouse, sans-serif;
+                    font-size: 20px;
+                    color: $color-primary1;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    color: #555;
+                }
+            }
+        }
+    }
+
+    /* Form Section */
+    .formSection {
+        padding: 100px 0;
+        background: #1a1a1a;
+        color: #fff;
+
+        .formWrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 50px;
+
+            h2 {
+                font-family: $font-ChickenRice, sans-serif;
+                font-size: 42px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 18px;
+            }
+        }
+
+        .contactForm {
+            .formGroup {
+                margin-bottom: 25px;
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+
+                input,
+                select,
+                textarea {
+                    width: 100%;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 15px;
+                    color: #fff;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    transition: border-color 0.3s ease;
+
+                    &:focus {
+                        outline: none;
+                        border-color: $color-primary1;
+                    }
+                }
+
+                textarea {
+                    height: 150px;
+                }
+
+                select option {
+                    background: #1a1a1a;
+                    color: #fff;
+                }
+            }
+
+            .submitBtn {
+                width: 100%;
+                background: $color-primary1;
+                color: #fff;
+                border: none;
+                padding: 18px;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-radius: 4px;
+
+                &:hover {
+                    background: darken($color-primary1, 10%);
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+
+    /* Support Section */
+    .supportSection {
+        padding: 60px 0;
+        background: #fff;
+        border-top: 1px solid #eee;
+
+        .supportGrid {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .supportColumn {
+            h5 {
+                font-family: $font-ChickenRice, sans-serif;
+                font-size: 18px;
+                color: #000;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+
+                li {
+                    font-size: 14px;
+                    color: #888;
+                    cursor: pointer;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $color-primary1;
+                    }
+                }
+            }
+        }
+    }
+}
