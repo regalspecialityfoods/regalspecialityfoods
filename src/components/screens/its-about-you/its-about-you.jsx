@@ -69,7 +69,7 @@ const ItsAboutYouScreen = () => {
                     </div>
                     <div className={styles.beliefBottomContent} data-aos="fade-up">
                         <p className={styles.beliefQuote}>
-                            "Not aggressive. Not complicated. Just right for everyday life."
+                            &quot;Not aggressive. Not complicated. Just right for everyday life.&quot;
                         </p>
                         <p className={styles.beliefDescription}>
                             It’s About You can be enjoyed as a warm, comforting drink or as a refreshing cold beverage — making it easy to fit into any routine.

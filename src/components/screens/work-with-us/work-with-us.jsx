@@ -100,7 +100,7 @@ const WorkWithUsScreen = () => {
                     <div className={styles.formWrapper} data-aos="fade-up">
                         <div className={styles.heading}>
                             <h2>Get In Touch</h2>
-                            <p>Tell us how you'd like to collaborate or ask us a question.</p>
+                            <p>Tell us how you&apos;d like to collaborate or ask us a question.</p>
                         </div>
 
                         <form className={styles.contactForm} onSubmit={handleSubmit}>
