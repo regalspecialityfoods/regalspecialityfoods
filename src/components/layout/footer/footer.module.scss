@@ -28,11 +28,16 @@
     }
 
     &.contact {
-      > div {
+      >div {
         font-size: 16px;
         margin-bottom: 12px;
 
         color: $color-accent1;
+
+
+        p {
+          margin-left: 32px;
+        }
 
         svg {
           font-size: 20px;
@@ -41,6 +46,10 @@
           path {
             color: $color-secondary1;
           }
+        }
+
+        @include respond-below(md) {
+          text-align: center;
         }
       }
     }

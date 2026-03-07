@@ -8,12 +8,15 @@ import {
   GeoAltFill,
   TelephoneFill,
 } from "react-bootstrap-icons";
-import { CONATCT_DETAILS, PAGES } from "@/constants/constants";
+import { PAGES } from "@/constants/constants";
 import SocialMedia from "@/components/ui/social_media/social_media";
 
 import Newsletter from "./newsletter";
 
 const Footer = () => {
+
+  // Regal Specialty Foods, 31A , Alamelumangapuram 2nd Cross Madipakkam, Chennai, PIN 600091 Tamil Nadu, India. M: 98848 60485
+
   return (
     <>
       <Newsletter />
@@ -53,13 +56,13 @@ const Footer = () => {
               <Col xs={12} md={6} lg={4}>
                 <div className={`${styles.footerSection} ${styles.contact}`}>
                   <div>
-                    <GeoAltFill /> Address 1, address line 2
+                    <GeoAltFill /> Regal Specialty Foods,<p>31A , Alamelumangapuram 2nd Cross Madipakkam, </p><p>Chennai - 600091.</p>
                   </div>
                   <div>
-                    <TelephoneFill /> 9876543210
+                    <TelephoneFill /> 98848 60485
                   </div>
                   <div>
-                    <EnvelopeAtFill /> business@company.com
+                    <EnvelopeAtFill /> sales@regalspecialtyfoods.com
                     {/* <Link href={`mailto:${CONATCT_DETAILS.email}`}>
                     {CONATCT_DETAILS.email}
                   </Link> */}
