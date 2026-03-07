@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./hero_section.module.scss";
-import { Image } from "react-bootstrap";
+
 import CustomContainer from "@/components/ui/custom_container/custom_container";
+import Image from "next/image";
 
 const HeroSection = ({ page, noImg }) => {
   return (
     <section
       className={styles.HeroSection}
       style={{
-        backgroundImage: `url("/images/page${page}/bg.png")`,
+        backgroundImage: `url("/images/page${page}/bg.webp")`,
       }}
     >
       <CustomContainer>

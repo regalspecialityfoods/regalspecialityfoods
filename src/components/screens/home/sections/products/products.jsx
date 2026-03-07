@@ -32,7 +32,7 @@ const ProductsSection = () => {
               ))}
             </Row>
             <div className={styles.btn}>
-              <CustomButton variant={2}>
+              <CustomButton variant={2} href={`/shop#${productCategory.id}`}>
                 Shop Now <ArrowRight />
               </CustomButton>
             </div>

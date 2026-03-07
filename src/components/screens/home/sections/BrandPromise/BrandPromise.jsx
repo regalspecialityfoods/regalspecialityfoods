@@ -53,9 +53,9 @@ const BrandPromise = () => {
         </div>
 
         <div className={styles.right} data-aos="fade-left">
-          <Image src="/images/prod1/prod.png" fluid alt="prod" />
+          <Image src={`/images/products/juniors/prod1.png`} fluid alt="prod" />
           <div>
-            <CustomButton>
+            <CustomButton href={"/about"}>
               Know More <ArrowRight />
             </CustomButton>
           </div>

@@ -1,7 +1,7 @@
 .CustomContainer {
-    max-width: 1400px;
+  // max-width: 100px;
 
-    @include respond-below(lg) {
-        max-width: 100%;
-    }
+  @include respond-below(lg) {
+    max-width: 100%;
+  }
 }

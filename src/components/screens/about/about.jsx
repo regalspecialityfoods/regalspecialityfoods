@@ -4,17 +4,53 @@ import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image } from "react-bootstrap";
 
 const AboutScreen = () => {
+  const leaders = [
+    {
+      name: "Keerthana Ananthakrishnan",
+      designation: "Co-Founder & CEO",
+      about:
+        "With a Master's degree in Food Technology & Science, Keerthana leads product development, nutrition research, and long-term brand strategy, focusing on creating clean and effective nutrition solutions.",
+    },
+    {
+      name: "Ananthakrishnan Subramanian",
+      designation: "Chief Sales Officer",
+      about:
+        "With over 27 years of leadership experience across global FMCG brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion.",
+    },
+    {
+      name: "Ashok Namboodiri",
+      designation: "Advisory Board",
+      about:
+        "Global media and business leader with extensive experience in brand building, strategy, and communications.",
+    },
+    {
+      name: "Nirupama Srinivasa Desikan",
+      designation: "Advisory Board",
+      about:
+        "Senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development.",
+    },
+  ];
+
   return (
     <div className={styles.AboutScreen}>
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroImageBg}>
-          <Image src="/images/about_hero_placeholder.png" alt="Regal Specialty Foods Superfoods" />
+          <Image
+            src="/images/about_hero_placeholder.png"
+            alt="Regal Specialty Foods Superfoods"
+          />
         </div>
         <CustomContainer>
           <div className={styles.heroContent}>
             <h1 data-aos="fade-up">ABOUT US</h1>
-            <Image src="/logo/logo_full_w.png" alt="logo" width={300} data-aos="fade-up" data-aos-delay="100" />
+            <Image
+              src="/logo/logo_full_w.png"
+              alt="logo"
+              width={300}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            />
           </div>
         </CustomContainer>
       </section>
@@ -24,13 +60,21 @@ const AboutScreen = () => {
         <CustomContainer>
           <div className={styles.introContent} data-aos="fade-up">
             <p>
-              Regal Specialty Foods is an Indian functional nutrition company focused on creating everyday nourishment solutions for modern families.
+              Regal Specialty Foods is an Indian functional nutrition company
+              focused on creating everyday nourishment solutions for modern
+              families.
             </p>
             <p>
-              In a world of fast-moving food choices, Regal takes a thoughtful approach — revisiting trusted ingredients like millets, cereals, and functional herbs, and bringing them into today’s routines through clean, accessible formulations.
+              In a world of fast-moving food choices, Regal takes a thoughtful
+              approach — revisiting trusted ingredients like millets, cereals,
+              and functional herbs, and bringing them into today’s routines
+              through clean, accessible formulations.
             </p>
             <p>
-              Our revitalising beverage blends are designed to be easy to prepare, enjoyable to consume, and suitable for regular use across age groups. The goal is simple: to make better nutrition a natural part of daily life.
+              Our revitalising beverage blends are designed to be easy to
+              prepare, enjoyable to consume, and suitable for regular use across
+              age groups. The goal is simple: to make better nutrition a natural
+              part of daily life.
             </p>
           </div>
         </CustomContainer>
@@ -44,25 +88,49 @@ const AboutScreen = () => {
             <h2 className={styles.sectionTitle}>Our Core Values</h2>
           </div>
           <div className={styles.valuesGrid}>
-            <div className={styles.valueItem} data-aos="fade-up" data-aos-delay="100" data-number="01">
+            <div
+              className={styles.valueItem}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-number="01"
+            >
               <span className={styles.number}>01</span>
               <div className={styles.valueContent}>
                 <h3>Innovation Rooted in Tradition</h3>
-                <p>We honour time-tested ingredients while continuously evolving through research and modern food science.</p>
+                <p>
+                  We honour time-tested ingredients while continuously evolving
+                  through research and modern food science.
+                </p>
               </div>
             </div>
-            <div className={styles.valueItem} data-aos="fade-up" data-aos-delay="200" data-number="02">
+            <div
+              className={styles.valueItem}
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-number="02"
+            >
               <span className={styles.number}>02</span>
               <div className={styles.valueContent}>
                 <h3>Empowered Choices</h3>
-                <p>We believe informed families make confident decisions about their nutrition and wellbeing.</p>
+                <p>
+                  We believe informed families make confident decisions about
+                  their nutrition and wellbeing.
+                </p>
               </div>
             </div>
-            <div className={styles.valueItem} data-aos="fade-up" data-aos-delay="300" data-number="03">
+            <div
+              className={styles.valueItem}
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-number="03"
+            >
               <span className={styles.number}>03</span>
               <div className={styles.valueContent}>
                 <h3>Uncompromising Quality</h3>
-                <p>From ingredient sourcing to taste and consistency, every detail reflects our commitment to excellence.</p>
+                <p>
+                  From ingredient sourcing to taste and consistency, every
+                  detail reflects our commitment to excellence.
+                </p>
               </div>
             </div>
           </div>
@@ -81,7 +149,12 @@ const AboutScreen = () => {
             <div className={styles.textColumn} data-aos="fade-left">
               <span className={styles.overline}>THE FUTURE</span>
               <h2>Our Vision</h2>
-              <p>To build a trusted Indian specialty food brand that normalises daily superfoods consumption across age groups and represents Indian nutrition globally through a modern, science-backed approach.</p>
+              <p>
+                To build a trusted Indian specialty food brand that normalises
+                daily superfoods consumption across age groups and represents
+                Indian nutrition globally through a modern, science-backed
+                approach.
+              </p>
             </div>
           </div>
         </CustomContainer>
@@ -99,7 +172,11 @@ const AboutScreen = () => {
             <div className={styles.textColumn} data-aos="fade-right">
               <span className={styles.overline}>OUR PURPOSE</span>
               <h2>Our Mission</h2>
-              <p>To create superfood-based specialty foods that support the nutritional needs of the entire family — men, women, and children — every day.</p>
+              <p>
+                To create superfood-based specialty foods that support the
+                nutritional needs of the entire family — men, women, and
+                children — every day.
+              </p>
             </div>
           </div>
         </CustomContainer>
@@ -118,16 +195,26 @@ const AboutScreen = () => {
               <span className={styles.overline}>WORDS FROM THE FOUNDER</span>
               <h2>Mr. Anantha Krishnan</h2>
               <p>
-                Regal Specialty Foods began with a simple belief — that good nutrition should be preventive, consistent, and accessible to every family.
+                Regal Specialty Foods began with a simple belief — that good
+                nutrition should be preventive, consistent, and accessible to
+                every family.
               </p>
               <p>
-                Growing up with traditional Indian food wisdom and observing how modern lifestyles have shifted away from balance, I felt the need to create products that bridge this gap. Regal is our effort to honour heritage while embracing science, convenience, and today’s evolving routines.
+                Growing up with traditional Indian food wisdom and observing how
+                modern lifestyles have shifted away from balance, I felt the
+                need to create products that bridge this gap. Regal is our
+                effort to honour heritage while embracing science, convenience,
+                and today’s evolving routines.
               </p>
               <p>
-                This journey is about building trust — with families who choose our products, with partners who grow alongside us, and with every individual who believes that small daily habits create long-term wellbeing.
+                This journey is about building trust — with families who choose
+                our products, with partners who grow alongside us, and with
+                every individual who believes that small daily habits create
+                long-term wellbeing.
               </p>
               <p className={styles.closing}>
-                Regal is not built for quick trends. It is built for generations.
+                Regal is not built for quick trends. It is built for
+                generations.
               </p>
             </div>
           </div>
@@ -142,32 +229,119 @@ const AboutScreen = () => {
             <h2 className={styles.sectionTitle}>Leadership Team</h2>
           </div>
           <div className={styles.teamGrid}>
-            <div className={styles.memberCard} data-aos="fade-up">
+            {leaders.map((leader, idx) => {
+              return (
+                <div
+                  className={styles.memberCard}
+                  data-aos="fade-up"
+                  key={leader.name}
+                  data-aos-delay={idx * 100}
+                >
+                  <div className={styles.memberImage}>
+                    <Image
+                      src="/images/avatar-placeholder.jpg"
+                      alt={leader.name}
+                    />
+                  </div>
+                  <div className={styles.memberInfo}>
+                    <h3>{leader.name}</h3>
+                    <p className={styles.role}>{leader.designation}</p>
+                    <p className={styles.bio}>{leader.about}</p>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <div className={styles.memberCard} data-aos="fade-up">
               <div className={styles.memberImage}>
-                <Image src="/images/team/keerthana.png" alt="Keerthana Ananthakrishnan" />
+                <Image
+                  src="/images/team/keerthana.png"
+                  alt="Keerthana Ananthakrishnan"
+                />
               </div>
               <div className={styles.memberInfo}>
                 <h3>Keerthana Ananthakrishnan</h3>
                 <p className={styles.role}>Co-Founder & CEO</p>
-                <p className={styles.bio}>With a Master’s degree in Food Technology & Science, Keerthana leads product development, nutrition research, and long-term brand strategy, focusing on creating clean and effective nutrition solutions.</p>
+                <p className={styles.bio}>
+                  With a Master’s degree in Food Technology & Science, Keerthana
+                  leads product development, nutrition research, and long-term
+                  brand strategy, focusing on creating clean and effective
+                  nutrition solutions.
+                </p>
               </div>
             </div>
-            <div className={styles.memberCard} data-aos="fade-up" data-aos-delay="100">
+            <div
+              className={styles.memberCard}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className={styles.memberImage}>
-                <Image src="/images/team/ananthakrishnan.png" alt="Ananthakrishnan Subramanian" />
+                <Image
+                  src="/images/team/ananthakrishnan.png"
+                  alt="Ananthakrishnan Subramanian"
+                />
               </div>
               <div className={styles.memberInfo}>
                 <h3>Ananthakrishnan Subramanian</h3>
                 <p className={styles.role}>Chief Sales Officer</p>
-                <p className={styles.bio}>With over 27 years of leadership experience across global FMCG brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion.</p>
+                <p className={styles.bio}>
+                  With over 27 years of leadership experience across global FMCG
+                  brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana,
+                  he brings deep expertise in sales strategy, distribution, and
+                  market expansion.
+                </p>
               </div>
             </div>
+            <div className={styles.memberCard} data-aos="fade-up">
+              <div className={styles.memberImage}>
+                <Image
+                  src="/images/team/keerthana.png"
+                  alt="Keerthana Ananthakrishnan"
+                />
+              </div>
+              <div className={styles.memberInfo}>
+                <h3>Keerthana Ananthakrishnan</h3>
+                <p className={styles.role}>Co-Founder & CEO</p>
+                <p className={styles.bio}>
+                  With a Master’s degree in Food Technology & Science, Keerthana
+                  leads product development, nutrition research, and long-term
+                  brand strategy, focusing on creating clean and effective
+                  nutrition solutions.
+                </p>
+              </div>
+            </div>
+            <div
+              className={styles.memberCard}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className={styles.memberImage}>
+                <Image
+                  src="/images/team/ananthakrishnan.png"
+                  alt="Ananthakrishnan Subramanian"
+                />
+              </div>
+              <div className={styles.memberInfo}>
+                <h3>Ananthakrishnan Subramanian</h3>
+                <p className={styles.role}>Chief Sales Officer</p>
+                <p className={styles.bio}>
+                  With over 27 years of leadership experience across global FMCG
+                  brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana,
+                  he brings deep expertise in sales strategy, distribution, and
+                  market expansion.
+                </p>
+              </div>
+            </div> */}
           </div>
 
-          <div className={`${styles.sectionHeader} ${styles.mtLarge}`} data-aos="fade-up">
+          {/* <div
+            className={`${styles.sectionHeader} ${styles.mtLarge}`}
+            data-aos="fade-up"
+          >
             <span className={styles.overline}>GUIDING VOICES</span>
             <h2 className={styles.sectionTitle}>Advisory Board</h2>
           </div>
+
+
           <div className={styles.advisoryGrid}>
             <div className={styles.advisorCard} data-aos="fade-up">
               <div className={styles.advisorImage}>
@@ -175,19 +349,32 @@ const AboutScreen = () => {
               </div>
               <div className={styles.advisorInfo}>
                 <h3>Ashok Namboodiri</h3>
-                <p>Global media and business leader with extensive experience in brand building, strategy, and communications.</p>
+                <p>
+                  Global media and business leader with extensive experience in
+                  brand building, strategy, and communications.
+                </p>
               </div>
             </div>
-            <div className={styles.advisorCard} data-aos="fade-up" data-aos-delay="100">
+            <div
+              className={styles.advisorCard}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className={styles.advisorImage}>
-                <Image src="/images/team/nirupama.png" alt="Nirupama Srinivasa Desikan" />
+                <Image
+                  src="/images/team/nirupama.png"
+                  alt="Nirupama Srinivasa Desikan"
+                />
               </div>
               <div className={styles.advisorInfo}>
                 <h3>Nirupama Srinivasa Desikan</h3>
-                <p>Senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development.</p>
+                <p>
+                  Senior food R&D and innovation leader with deep expertise in
+                  functional foods and nutritional product development.
+                </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </CustomContainer>
       </section>
     </div>

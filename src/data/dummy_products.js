@@ -1,6 +1,7 @@
 const productCategories = [
   {
     name: "For Men",
+    id: "Men",
     products: [
       {
         id: "men-vitality-01",
@@ -18,9 +19,24 @@ const productCategories = [
           "Balanced millet-based nourishment crafted to support daily energy and active routines.",
 
         sizes: [
-          { label: "200 g", originalPrice: 699, currentPrice: 549, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1299, currentPrice: 1099, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2299, currentPrice: 1999, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 699,
+            currentPrice: 549,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1299,
+            currentPrice: 1099,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2299,
+            currentPrice: 1999,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: [
@@ -65,9 +81,24 @@ const productCategories = [
           "Functional herb and cereal blend formulated to support stamina and focus.",
 
         sizes: [
-          { label: "200 g", originalPrice: 749, currentPrice: 599, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1399, currentPrice: 1199, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2399, currentPrice: 2099, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 749,
+            currentPrice: 599,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1399,
+            currentPrice: 1199,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2399,
+            currentPrice: 2099,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: [
@@ -141,6 +172,8 @@ const productCategories = [
 
   {
     name: "For Women",
+    id: "Women",
+
     products: [
       {
         id: "women-balance-01",
@@ -158,9 +191,24 @@ const productCategories = [
           "Gentle, holistic nourishment designed to support everyday wellness and vitality.",
 
         sizes: [
-          { label: "200 g", originalPrice: 699, currentPrice: 559, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1299, currentPrice: 1099, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2299, currentPrice: 1999, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 699,
+            currentPrice: 559,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1299,
+            currentPrice: 1099,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2299,
+            currentPrice: 1999,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: [
@@ -201,9 +249,24 @@ const productCategories = [
           "A thoughtfully crafted blend supporting daily radiance and nourishment.",
 
         sizes: [
-          { label: "200 g", originalPrice: 749, currentPrice: 599, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1399, currentPrice: 1199, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2399, currentPrice: 2099, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 749,
+            currentPrice: 599,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1399,
+            currentPrice: 1199,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2399,
+            currentPrice: 2099,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: [
@@ -275,6 +338,7 @@ const productCategories = [
 
   {
     name: "For Children",
+    id: "Children",
     products: [
       {
         id: "kids-growth-01",
@@ -292,9 +356,24 @@ const productCategories = [
           "Gentle, nutrient-rich blend designed to support healthy growth.",
 
         sizes: [
-          { label: "200 g", originalPrice: 649, currentPrice: 499, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1199, currentPrice: 999, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2199, currentPrice: 1899, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 649,
+            currentPrice: 499,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1199,
+            currentPrice: 999,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2199,
+            currentPrice: 1899,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: ["Supports growth", "Mild taste", "Easy digestion"],
@@ -330,9 +409,24 @@ const productCategories = [
           "Gentle, nutrient-rich blend designed to support healthy growth.",
 
         sizes: [
-          { label: "200 g", originalPrice: 649, currentPrice: 499, maxPerOrder: 5 },
-          { label: "454 g", originalPrice: 1199, currentPrice: 999, maxPerOrder: 5 },
-          { label: "908 g", originalPrice: 2199, currentPrice: 1899, maxPerOrder: 5 },
+          {
+            label: "200 g",
+            originalPrice: 649,
+            currentPrice: 499,
+            maxPerOrder: 5,
+          },
+          {
+            label: "454 g",
+            originalPrice: 1199,
+            currentPrice: 999,
+            maxPerOrder: 5,
+          },
+          {
+            label: "908 g",
+            originalPrice: 2199,
+            currentPrice: 1899,
+            maxPerOrder: 5,
+          },
         ],
 
         keyBenefits: ["Supports growth", "Mild taste", "Easy digestion"],

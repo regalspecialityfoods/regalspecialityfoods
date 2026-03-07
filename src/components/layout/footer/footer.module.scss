@@ -1,7 +1,7 @@
 .Footer {
-  // background-color: $color_black;
-  padding: 80px 0 60px 0;
-  background-image: url("/images/footer-bg.webp");
+  background-color: $color_primary1;
+  padding: 80px 0 20px 0;
+
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -15,11 +15,14 @@
       a {
         display: block;
         margin-bottom: 12px;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 15px;
+        // font-weight: 500;
+        color: $color_accent1;
+
+        text-transform: uppercase;
 
         &:hover {
-          color: $color_primary1;
+          color: $color-secondary1;
         }
       }
     }
@@ -29,12 +32,14 @@
         font-size: 16px;
         margin-bottom: 12px;
 
+        color: $color-accent1;
+
         svg {
           font-size: 20px;
           margin-right: 8px;
 
           path {
-            color: $color_primary1;
+            color: $color-secondary1;
           }
         }
       }
@@ -45,10 +50,9 @@
     margin-top: 50px;
 
     p {
-      color: red;
       text-align: center;
-      font-size: 17px;
-      color: #535353;
+      font-size: 15px;
+      color: #c6c6c6b0;
     }
   }
 
