@@ -52,7 +52,7 @@ const AboutScreen = () => {
           <div className={styles.heroContent}>
             <h1 data-aos="fade-up">ABOUT US</h1>
             <Image
-              src="/logo/logo_full_w.png"
+              src="/logo/logo_full_w_white.png"
               alt="logo"
               width={300}
               data-aos="fade-up"
@@ -194,9 +194,8 @@ const AboutScreen = () => {
         <CustomContainer>
           <div className={styles.founderContent}>
             <div className={styles.founderImage} data-aos="fade-right">
-              <div className={styles.imagePlaceholder}>
-                <span>Founder Image</span>
-              </div>
+              <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
+
             </div>
             <div className={styles.founderText} data-aos="fade-left">
               <span className={styles.overline}>WORDS FROM THE FOUNDER</span>

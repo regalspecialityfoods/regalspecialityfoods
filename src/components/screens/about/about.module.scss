@@ -314,22 +314,12 @@
       flex: 1;
       border: 2px solid $color-primary1;
       border-radius: 12px;
+      overflow: hidden;
 
-      .imagePlaceholder {
-        aspect-ratio: 3/4;
-        background-color: #000;
-        @include flexCenter;
-        color: #fff;
-        font-weight: 400;
-        font-size: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        opacity: 0.1;
-      }
 
       @include respond-below(md) {
-        width: 60%;
-        aspect-ratio: 3/4;
+        width: 70%;
+        // aspect-ratio: 3/4;
         margin: auto;
       }
     }
