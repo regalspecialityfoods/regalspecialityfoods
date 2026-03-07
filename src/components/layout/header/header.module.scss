@@ -33,6 +33,9 @@
 
           a {
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 15px;
+
 
             &:hover {
               color: $color-primary1;

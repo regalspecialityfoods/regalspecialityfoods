@@ -10,6 +10,7 @@ const HeroSection = ({ page, noImg }) => {
       className={styles.HeroSection}
       style={{
         backgroundImage: `url("/images/page${page}/bg.webp")`,
+        // backgroundImage: `url("/images/page${page}/bgp.png")`,
       }}
     >
       <CustomContainer>
