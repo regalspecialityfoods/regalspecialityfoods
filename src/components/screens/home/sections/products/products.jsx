@@ -13,9 +13,7 @@ const ProductsSection = () => {
     <CustomSection className={styles.ProductsSection}>
       <SectionHeading
         head={"Our Products"}
-        caption={`The Visual Composer drag-and-drop page builder is packed with all Elated
-        Themes. Setting up your website and creating pages full of stunning
-        content.`}
+        caption={` It’s About You is Regal’s flagship revitalising beverage blend range — thoughtfully created to support daily wellness across life stages.`}
       />
 
       <div className={styles.ProductsSectionCont}>

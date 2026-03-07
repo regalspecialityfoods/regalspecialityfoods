@@ -14,7 +14,7 @@ const HomeScreen = () => {
       {/* <ProductImageSection /> */}
       <HeroSection page={3} noImg />
       <ProductsSection />
-      <BrandPromise />
+      {/* <BrandPromise /> */}
     </div>
   );
 };

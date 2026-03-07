@@ -51,13 +51,13 @@ const AboutScreen = () => {
         <CustomContainer>
           <div className={styles.heroContent}>
             <h1 data-aos="fade-up">ABOUT US</h1>
-            <Image
+            {/* <Image
               src="/logo/logo_full_w_white.png"
               alt="logo"
               width={300}
               data-aos="fade-up"
               data-aos-delay="100"
-            />
+            /> */}
           </div>
         </CustomContainer>
       </section>
@@ -150,7 +150,7 @@ const AboutScreen = () => {
           <div className={styles.splitGrid}>
             <div className={styles.imageColumn} data-aos="fade-right">
               <div className={styles.imageWrap}>
-                <Image src="/images/vision_img.png" alt="Our Vision" />
+                <Image src="/images/vision.png" alt="Our Vision" />
               </div>
             </div>
             <div className={styles.textColumn} data-aos="fade-left">
@@ -173,7 +173,7 @@ const AboutScreen = () => {
           <div className={`${styles.splitGrid} ${styles.reversed}`}>
             <div className={styles.imageColumn} data-aos="fade-left">
               <div className={styles.imageWrap}>
-                <Image src="/images/mission_img.png" alt="Our Mission" />
+                <Image src="/images/mission.webp" alt="Our Mission" />
               </div>
             </div>
             <div className={styles.textColumn} data-aos="fade-right">

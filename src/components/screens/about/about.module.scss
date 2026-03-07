@@ -94,7 +94,7 @@
 
       h1 {
         font-family: inherit;
-        font-size: 16px;
+        font-size: 40px;
         letter-spacing: 4px;
         margin-bottom: 25px;
         color: #fff;
@@ -253,6 +253,9 @@
       .imageWrap {
         width: 100%;
         aspect-ratio: 4/3;
+        // background: radial-gradient($color-accent1, $color-primary1);
+        // background: linear-gradient(45deg, white, $color-primary1);
+        border-radius: 24px;
         background-color: #f0f0f0;
         overflow: hidden;
 
@@ -326,6 +329,11 @@
 
     .founderText {
       flex: 1.5;
+      background: linear-gradient(rgba(255, 255, 255, 0.7)), url("/images/logo.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
 
       h2 {
         font-family: $font-FarmHouse, sans-serif;

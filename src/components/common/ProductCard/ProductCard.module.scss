@@ -15,6 +15,7 @@
 
   .details {
     padding: 20px;
+
     h4 {
       margin: 0;
       font-family: ChickenRice;
@@ -33,6 +34,7 @@
       font-size: 15px;
       margin-bottom: 10px;
     }
+
     .price {
       display: flex;
       align-items: flex-end;
@@ -55,6 +57,7 @@
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
     .img {
       img {
         transform: scale(1);
