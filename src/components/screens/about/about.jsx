@@ -10,24 +10,31 @@ const AboutScreen = () => {
       designation: "Co-Founder & CEO",
       about:
         "With a Master's degree in Food Technology & Science, Keerthana leads product development, nutrition research, and long-term brand strategy, focusing on creating clean and effective nutrition solutions.",
+      image: "/images/leaders/keerthana.jpeg",
     },
     {
       name: "Ananthakrishnan Subramanian",
       designation: "Chief Sales Officer",
       about:
         "With over 27 years of leadership experience across global FMCG brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion.",
+      image: "/images/leaders/ananth.jpeg",
+
     },
     {
       name: "Ashok Namboodiri",
       designation: "Advisory Board",
       about:
         "Global media and business leader with extensive experience in brand building, strategy, and communications.",
+      image: "/images/leaders/ashok.jpeg",
+
     },
     {
       name: "Nirupama Srinivasa Desikan",
       designation: "Advisory Board",
       about:
         "Senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development.",
+      image: "/images/leaders/nirupama.jpeg",
+
     },
   ];
 
@@ -239,7 +246,8 @@ const AboutScreen = () => {
                 >
                   <div className={styles.memberImage}>
                     <Image
-                      src="/images/avatar-placeholder.jpg"
+                      src={leader.image}
+                      // src="/images/avatar-placeholder.jpg"
                       alt={leader.name}
                     />
                   </div>

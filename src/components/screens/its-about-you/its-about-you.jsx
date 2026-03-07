@@ -27,10 +27,10 @@ const ItsAboutYouScreen = () => {
                         <span className={styles.overline}>PERSONAL WELLNESS</span>
                         <h3>About the Brand</h3>
                         <p>
-                            It’s About You is Regal’s flagship revitalising beverage blend range — thoughtfully created to support daily wellness across life stages.
+                            It&apos;s About You is Regal&apos;s flagship revitalising beverage blend range — thoughtfully created to support daily wellness across life stages.
                         </p>
                         <p>
-                            Each blend is tailored for men, women, or children, keeping their unique nutritional needs in mind while ensuring great taste and ease of preparation.
+                            Each blend is tailored for men, women, and children, keeping their unique nutritional needs in mind while ensuring great taste and ease of preparation.
                         </p>
                     </div>
                 </CustomContainer>
