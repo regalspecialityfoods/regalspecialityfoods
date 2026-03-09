@@ -4,13 +4,20 @@ const productCategories = [
     id: "Men",
     products: [
       {
-        id: "men-vitality-01",
+        id: "Chocolate-Vitality-Blend",
         sku: "RSF-MEN-VIT-01",
-        name: "Vitality Blend",
+        name: "Chocolate Vitality Blend",
         category: "Men",
         rating: 4.5,
         image: "/images/products/men/prod1.png",
         tags: ["Bestseller", "Clean Label"],
+
+        images: [
+          "/images/products/men/chocolate-vitality-blend/men_chocolate_2.png",
+          "/images/products/men/chocolate-vitality-blend/men_chocolate_3.png",
+          "/images/products/men/chocolate-vitality-blend/men_chocolate_4.png",
+          "/images/products/men/chocolate-vitality-blend/men_chocolate_1.png",
+        ],
 
         overview:
           "A revitalising millet-based beverage blend crafted to support daily energy, stamina, and consistent performance for modern lifestyles.",
@@ -65,12 +72,19 @@ const productCategories = [
       },
 
       {
-        id: "men-performance-02",
+        id: "kesar-badam-endurance-blend",
         sku: "RSF-MEN-PERF-02",
-        name: "Performance Blend",
+        name: "Kesar Badam Endurance Blend",
         category: "Men",
         rating: 4.3,
         image: "/images/products/men/prod2.png",
+
+        images: [
+          "/images/products/men/kesar-badam-endurance-blend/Men_Kesar_2.png",
+          "/images/products/men/kesar-badam-endurance-blend/Men_Kesar_3.png",
+          "/images/products/men/kesar-badam-endurance-blend/Men_Kesar_4.png",
+          "/images/products/men/kesar-badam-endurance-blend/Men_Kesar_1.png",
+        ],
 
         tags: ["New"],
 
@@ -176,12 +190,20 @@ const productCategories = [
 
     products: [
       {
-        id: "women-balance-01",
+        id: "banana-wellness-blend",
         sku: "RSF-WOM-BAL-01",
-        name: "Balance Blend",
+        name: "Banana Wellness Blend",
         category: "Women",
         rating: 4.7,
         image: "/images/products/womens/prod1.png",
+
+        images: [
+          "/images/products/womens/banana-wellness-blend/women_banana_2.png",
+          "/images/products/womens/banana-wellness-blend/women_banana_3.png",
+          "/images/products/womens/banana-wellness-blend/women_banana_4.png",
+          "/images/products/womens/banana-wellness-blend/women_banana_1.png",
+        ],
+
         tags: ["Bestseller"],
 
         overview:
@@ -234,12 +256,20 @@ const productCategories = [
       },
 
       {
-        id: "women-glow-02",
+        id: "vanilla-radiance-blend",
         sku: "RSF-WOM-GLO-02",
-        name: "Glow Blend",
+        name: "Vanilla Radiance Blend",
         category: "Women",
         rating: 4.4,
         image: "/images/products/womens/prod2.png",
+
+        images: [
+          "/images/products/womens/vanilla-radiance-blend/women_vanilla_2.png",
+          "/images/products/womens/vanilla-radiance-blend/women_vanilla_3.png",
+          "/images/products/womens/vanilla-radiance-blend/women_vanilla_4.png",
+          "/images/products/womens/vanilla-radiance-blend/women_vanilla_1.png",
+        ],
+
         tags: ["New"],
 
         overview:
@@ -341,12 +371,20 @@ const productCategories = [
     id: "Children",
     products: [
       {
-        id: "kids-growth-01",
+        id: "butterscotch-focus-blend",
         sku: "RSF-KID-GRO-01",
-        name: "Growth Blend",
+        name: "Butterscotch Focus Blend",
         category: "Children",
         rating: 4.8,
         image: "/images/products/juniors/prod1.png",
+
+        images: [
+          "/images/products/juniors/butterscotch-focus-blend/Junior_Butter_2.png",
+          "/images/products/juniors/butterscotch-focus-blend/Junior_Butter_3.png",
+          "/images/products/juniors/butterscotch-focus-blend/Junior_Butter_4.png",
+          "/images/products/juniors/butterscotch-focus-blend/Junior_Butter_1.png",
+        ],
+
         tags: ["Bestseller"],
 
         overview:
@@ -394,12 +432,20 @@ const productCategories = [
         availability: "In Stock",
       },
       {
-        id: "kids-growth-02",
+        id: "strawberry-memory-blend",
         sku: "RSF-KID-GRO-02",
-        name: "Growth Blend 2",
+        name: "Strawberry Memory Blend",
         category: "Children",
         rating: 4.8,
         image: "/images/products/juniors/prod2.png",
+
+        images: [
+          "/images/products/juniors/strawberry-memory-blend/Junior_strawberry_2.png",
+          "/images/products/juniors/strawberry-memory-blend/Junior_strawberry_3.png",
+          "/images/products/juniors/strawberry-memory-blend/Junior_strawberry_4.png",
+          "/images/products/juniors/strawberry-memory-blend/Junior_strawberry_1.png",
+        ],
+
         tags: ["Bestseller"],
 
         overview:

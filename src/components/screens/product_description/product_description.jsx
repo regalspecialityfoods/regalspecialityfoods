@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Image, Offcanvas } from "react-bootstrap";
+import { Carousel, Image, Offcanvas } from "react-bootstrap";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import styles from "./product_description.module.scss";
-import { Check2Circle } from "react-bootstrap-icons";
+import { Check2Circle, ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import { useCart } from "@/context/CartContext";
 
 const ProductDescriptionScreen = ({ product }) => {
@@ -11,15 +11,13 @@ const ProductDescriptionScreen = ({ product }) => {
 
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
-
-
   const discount =
     selectedSize.originalPrice > selectedSize.currentPrice
       ? Math.round(
-        ((selectedSize.originalPrice - selectedSize.currentPrice) /
-          selectedSize.originalPrice) *
-        100,
-      )
+          ((selectedSize.originalPrice - selectedSize.currentPrice) /
+            selectedSize.originalPrice) *
+            100,
+        )
       : 0;
 
   const getStockClass = () => {
@@ -32,16 +30,44 @@ const ProductDescriptionScreen = ({ product }) => {
     }
   };
 
+  const [currenKey, setCurrentKey] = useState(0);
+
   return (
     <div className={styles.ProductDescriptionScreen}>
-
       <Offcanvas />
       <CustomContainer>
         <div className={styles.topSection}>
           {/* LEFT IMAGE */}
           <div className={styles.imageBox}>
-            <Image src={product.image} fluid alt={product.name} />
-            <div className={`${styles.stock} ${getStockClass()}`}>{product.availability}</div>
+            <Carousel
+              controls
+              indicators={false}
+              onSlide={(n) => setCurrentKey(n)}
+              fade
+              nextIcon={
+                <ChevronRight color="#e02a27" size={35} />
+                // <span style={{ fontSize: "50px", color: "red" }}>→</span>
+              }
+              className={styles["flip-carousel"]}
+              prevIcon={<ChevronLeft color="#e02a27" size={35} />}
+            >
+              {product.images.map((img, idx) => {
+                return (
+                  <Carousel.Item key={`${product.name}_${idx}`}>
+                    <Image
+                      src={img}
+                      fluid
+                      alt={product.name}
+                      className={styles["flip-img"]}
+                      key={currenKey}
+                    />
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+            <div className={`${styles.stock} ${getStockClass()}`}>
+              {product.availability}
+            </div>
           </div>
 
           {/* RIGHT INFO */}
@@ -56,7 +82,10 @@ const ProductDescriptionScreen = ({ product }) => {
               <h4>Key Benefits</h4>
               <ul>
                 {product.keyBenefits?.map((item, i) => (
-                  <li key={i}><Check2Circle />{item}</li>
+                  <li key={i}>
+                    <Check2Circle />
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -68,8 +97,9 @@ const ProductDescriptionScreen = ({ product }) => {
                 {product.sizes.map((size, i) => (
                   <button
                     key={i}
-                    className={`${styles.sizeBtn} ${selectedSize.label === size.label ? styles.activeSize : ""
-                      }`}
+                    className={`${styles.sizeBtn} ${
+                      selectedSize.label === size.label ? styles.activeSize : ""
+                    }`}
                     onClick={() => setSelectedSize(size)}
                   >
                     {size.label}
@@ -80,7 +110,6 @@ const ProductDescriptionScreen = ({ product }) => {
 
             {/* Pricing & Availability */}
             <div className={styles.priceBox}>
-
               <div className={styles.priceRow}>
                 <div className={styles.priceHead}>
                   {discount > 0 && (
@@ -93,7 +122,6 @@ const ProductDescriptionScreen = ({ product }) => {
                   </span>
                 )}
                 <h2>₹{selectedSize.currentPrice}</h2>
-
               </div>
             </div>
 
@@ -103,10 +131,12 @@ const ProductDescriptionScreen = ({ product }) => {
                 const cartItem = cartItems.find(
                   (item) =>
                     item.productId === product.id &&
-                    item.sizeLabel === selectedSize.label
+                    item.sizeLabel === selectedSize.label,
                 );
                 const isOutOfStock = product.availability === "Out of Stock";
-                const isLimitReached = cartItem && cartItem.quantity >= (cartItem.maxPerOrder || 999);
+                const isLimitReached =
+                  cartItem &&
+                  cartItem.quantity >= (cartItem.maxPerOrder || 999);
 
                 let buttonText = "Add To Cart";
                 let buttonVariant = 1;
@@ -166,7 +196,9 @@ const ProductDescriptionScreen = ({ product }) => {
           </div>
 
           {/* Preparation Instructions */}
-          <div className={`${styles.sectionBlock} ${styles.detailsCard} ${styles.fullWidth}`}>
+          <div
+            className={`${styles.sectionBlock} ${styles.detailsCard} ${styles.fullWidth}`}
+          >
             <h3>Preparation Instructions</h3>
             <div className={styles.preparation}>
               <div>
@@ -181,7 +213,9 @@ const ProductDescriptionScreen = ({ product }) => {
           </div>
 
           {/* Reviews Placeholder */}
-          <div className={`${styles.sectionBlock} ${styles.detailsCard} ${styles.fullWidth}`}>
+          <div
+            className={`${styles.sectionBlock} ${styles.detailsCard} ${styles.fullWidth}`}
+          >
             <h3>Customer Reviews & Testimonials</h3>
             <div className={styles.reviewPlaceholder}>
               Reviews coming soon. Be the first to share your experience.

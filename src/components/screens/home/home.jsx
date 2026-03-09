@@ -9,10 +9,10 @@ import PackshotSection from "./sections/packshot_section/packshot_section";
 const HomeScreen = () => {
   return (
     <div className={styles.HomeScreen}>
+      <HeroSection page={3} noImg />
 
       <PackshotSection />
       {/* <ProductImageSection /> */}
-      <HeroSection page={3} noImg />
       <ProductsSection />
       {/* <BrandPromise /> */}
     </div>
