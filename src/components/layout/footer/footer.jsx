@@ -61,7 +61,8 @@ const Footer = () => {
                     <p>CIN U46309TN2026PTC190729</p>
                     <p>Sri Sastha I Floor,</p>
                     <p>31A , Alamelumangapuram II Cross,</p>
-                    <p>Madipakkam, Chennai - 600091.</p>
+                    <p>Madipakkam, Chennai - 600091</p>
+                    <p>Tamil Nadu | India</p>
                   </div>
                   <div>
                     <TelephoneFill /> +91 44 7967 3426
