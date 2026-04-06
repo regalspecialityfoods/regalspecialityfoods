@@ -1,5 +1,7 @@
-.CustomContainer{
-    @include respond-below(lg){
-        max-width: 100%;
-    }
+.CustomContainer {
+  // max-width: 100px;
+
+  @include respond-below(lg) {
+    max-width: 100%;
+  }
 }

@@ -1,0 +1,117 @@
+@import "@/styles/scss/variables";
+@import "@/styles/scss/media_queries";
+@import "@/styles/scss/mixins";
+
+.ShopScreen {
+    background-color: #fff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+
+    section {
+        padding: 80px 0;
+
+        @include respond-below(md) {
+            padding: 50px 0;
+        }
+    }
+
+    /* Hero Section */
+    .heroSection {
+        background-color: #000;
+        height: 60vh;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        @include respond-below(md) {
+            height: 40vh;
+        }
+
+        .heroImageBg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+            }
+        }
+
+        .heroContent {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+
+            .logoBox {
+                margin-bottom: 25px;
+
+                img {
+                    height: 50px;
+                    width: auto;
+                    filter: brightness(0) invert(1);
+                    opacity: 0.8;
+                }
+            }
+
+            h2 {
+                font-family: $font-ChickenRice, sans-serif;
+                font-size: 64px;
+                color: $color-primary1;
+                margin: 0;
+                line-height: 1.1;
+                font-weight: 500;
+                letter-spacing: 12px;
+                text-transform: uppercase;
+
+                @include respond-below(md) {
+                    font-size: 44px;
+                    letter-spacing: 6px;
+                }
+            }
+        }
+    }
+
+    .categorySection {
+        &:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .categoryHeader {
+            text-align: center;
+            margin-bottom: 60px;
+
+            h3 {
+                font-family: $font-ChickenRice, sans-serif;
+                font-size: 42px;
+                color: $color-primary1;
+                font-weight: 500;
+                margin-bottom: 15px;
+
+                @include respond-below(md) {
+                    font-size: 32px;
+                }
+            }
+
+            .underline {
+                width: 60px;
+                height: 3px;
+                background-color: $color-primary1;
+                margin: 0 auto;
+            }
+        }
+
+        .productRow {
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.CustomButton {
+  padding: 8px 24px;
+  outline: none;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+
+  &.wFull {
+    width: 100%;
+  }
+
+  &.v1 {
+    background-color: $color-primary1;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      border-color: $color-primary1;
+      color: $color-primary1;
+    }
+  }
+
+  &.v2 {
+    background-color: white;
+    border-color: $color-primary1;
+    color: $color-primary1;
+
+    &:hover {
+      background-color: $color-primary1;
+      color: white;
+    }
+  }
+
+  &.v3 {
+    background-color: white;
+    border-color: green;
+    color: green;
+
+    // &:hover {
+    //   background-color: green;
+    //   color: white;
+    // }
+  }
+
+
+  &.v4 {
+    background-color: $color-primary1;
+    color: white;
+
+
+  }
+}

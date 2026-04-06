@@ -1,0 +1,44 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+
+  nav {
+    * {
+      margin: 0;
+    }
+
+    width: 100%;
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+        text-align: center;
+
+        &.active {
+          background-color: $color-primary1;
+
+          a {
+            color: white !important;
+          }
+        }
+
+        a {
+          border-bottom: 1px solid $color-primary1;
+          padding: 12px 0;
+          width: 100%;
+          display: block;
+
+          &:hover {
+            background: rgba($color-primary1, 0.2);
+            // color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.HeroSection {
+  height: 100vh;
+  max-width: 100dvw;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  // background-color: red;
+  // background-image: url("/images/hero.webp");
+  //   background-position: left;
+  // background-repeat: no-repeat;
+  // background-color: #eaece9;
+
+  .cont {
+    // display: grid;
+    // width: 100%;
+    // grid-template-columns: 2fr 40%;
+
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: 46%;
+    }
+
+    .left {
+      // display: flex;
+      justify-content: flex-end;
+      // background-color: red;
+      // padding: 100px 20px 0 0;
+
+      img {
+        // height: 90dvh;
+        // background-color: blue;
+
+        width: 100%;
+      }
+    }
+
+    .right {
+      height: 100vh;
+      // height: 100vh;
+      //   background-color: red;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+
+      .bg {
+        position: absolute;
+        height: 80%;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        background-image: url("/images/logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+      }
+
+      h1 {
+        font-family: "FarmHouse", sans-serif;
+        font-weight: 400;
+        font-size: 70px;
+        letter-spacing: 2px;
+        z-index: 10;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .nat {
+        max-width: 550px;
+        font-weight: 300;
+        // letter-spacing: 1px;
+        z-index: 10;
+        margin-left: 70px;
+        margin-top: -40px;
+
+        h2 {
+          color: green;
+          font-size: 80px;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    background-size: 100%;
+    background-size: cover;
+    height: fit-content;
+
+    .cont {
+      flex-direction: column;
+      > div {
+        width: 100%;
+      }
+
+      .right {
+        height: fit-content;
+
+        margin-top: 100px;
+
+        text-align: center;
+        padding: 40px;
+
+        .bg {
+          height: 50%;
+        }
+
+        h1 {
+          font-size: 60px;
+        }
+
+        h2 {
+          font-size: 60px;
+        }
+
+        .nat {
+          margin-left: 0;
+          max-width: unset;
+        }
+      }
+    }
+  }
+}

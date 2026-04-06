@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import NProgress from "nprogress";
@@ -9,11 +9,15 @@ import Router from "next/router";
 import styles from "../styles/Home.module.scss";
 import fonts from "@/styles/fonts";
 import { ToastContainer } from "react-toastify";
+import Layout from "@/components/layout/layout";
+import { CartProvider } from "@/context/CartContext";
+import FloatingCartButton from "@/components/cart/FloatingCartButton";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({
-      duration: 1500,
+      duration: 1100,
       once: false,
     });
   }, []);
@@ -32,9 +36,15 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <main className={`${styles.main} ${fonts.MainFont}`}>
-      <Component {...pageProps} />
-      <ToastContainer position="bottom-right" />
+    <main className={`${styles.main}`}>
+      <CartProvider>
+        <Layout>
+          <Component {...pageProps} />
+          <ToastContainer position="bottom-right" />
+        </Layout>
+        <FloatingCartButton />
+        <CartDrawer />
+      </CartProvider>
     </main>
   );
 }

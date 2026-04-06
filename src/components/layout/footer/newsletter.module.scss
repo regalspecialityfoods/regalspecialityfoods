@@ -1,0 +1,112 @@
+.Newsletter {
+    background: white;
+    padding: 80px 0;
+    color: $color-primary1;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    .content {
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        h2 {
+            font-family: $font-Brownist;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            color: $color-primary1;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: $color-text_grey1;
+        }
+    }
+
+    .formWrapper {
+        display: flex;
+        gap: 10px;
+        background: #f9f9f9;
+        padding: 8px;
+        border-radius: 50px;
+        border: 1px solid #eeeeee;
+        transition: all 0.3s ease;
+
+        &:focus-within {
+            background: white;
+            border-color: $color-primary1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 24px;
+            color: #333;
+            font-size: 1rem;
+            outline: none;
+
+            &::placeholder {
+                color: #999;
+            }
+        }
+
+        button {
+            background: $color-secondary1;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($color-secondary1, 5%);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(12, 135, 69, 0.2);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @include respond-below(md) {
+        padding: 60px 20px;
+
+        .content {
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .formWrapper {
+            flex-direction: column;
+            background: transparent;
+            border: none;
+            padding: 0;
+            gap: 15px;
+
+            input {
+                background: #f9f9f9;
+                border: 1px solid #eeeeee;
+                border-radius: 50px;
+                text-align: center;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

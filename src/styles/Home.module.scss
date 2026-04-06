@@ -1,4 +1,8 @@
 .main {
+  section {
+    max-width: 100dvw;
+    overflow: hidden;
+  }
   // * {
   //   &::-webkit-scrollbar {
   //     width: 5px !important;
@@ -11,5 +15,4 @@
   //     border-radius: 30px !important;
   //   }
   // }
-  
 }

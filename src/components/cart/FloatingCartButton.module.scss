@@ -1,0 +1,63 @@
+@import "@/styles/scss/variables";
+
+.floatingCartBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: $color-primary1;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba($color-primary1, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba($color-primary1, 0.5);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.iconWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: white;
+    color: $color-primary1;
+    font-size: 12px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1.5px solid $color-primary1;
+}
+
+@media (max-width: 768px) {
+    .floatingCartBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}

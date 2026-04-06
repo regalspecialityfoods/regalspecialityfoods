@@ -1,0 +1,500 @@
+@import "@/styles/scss/variables";
+@import "@/styles/scss/media_queries";
+@import "@/styles/scss/mixins";
+
+.AboutScreen {
+  background-color: #fff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  font-family: inherit;
+
+  section {
+    padding: 120px 0;
+
+    @include respond-below(md) {
+      padding: 80px 0;
+    }
+  }
+
+  .overline {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 70px;
+
+    @include respond-below(md) {
+      margin-bottom: 40px;
+    }
+
+    &.mtLarge {
+      margin-top: 120px;
+
+      @include respond-below(md) {
+        margin-top: 80px;
+      }
+    }
+  }
+
+  .sectionTitle {
+    font-family: $font-ChickenRice, sans-serif;
+    font-size: 40px;
+    color: $color-primary1;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin: 0;
+
+    @include respond-below(md) {
+      font-size: 30px;
+    }
+  }
+
+  /* Hero Section */
+  .heroSection {
+    background-color: #000; // Dark theme hero for impact
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-below(md) {
+      height: 50vh;
+    }
+
+    .heroImageBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.25;
+      }
+    }
+
+    .heroContent {
+      position: relative;
+      z-index: 2;
+
+      h1 {
+        font-family: inherit;
+        font-size: 40px;
+        letter-spacing: 4px;
+        margin-bottom: 25px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        opacity: 0.8;
+      }
+
+      img {
+        max-width: 350px;
+        height: auto;
+
+        @include respond-below(md) {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+
+  /* Intro Section */
+  .introSection {
+    background-color: #fff;
+    text-align: center;
+
+    .introContent {
+      max-width: 900px;
+      margin: 0 auto;
+
+      p {
+        font-size: 22px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        color: #222;
+        font-weight: 300;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include respond-below(md) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  /* Core Values - Reworked */
+  .valuesSection {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    .valuesGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+
+      @include respond-below(md) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    .valueItem {
+      position: relative;
+      padding-top: 50px;
+      border-top: 1px solid #e0e0e0;
+      transition: all 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(-1px);
+      }
+
+      .number {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        font-family: inherit;
+        font-size: 11px;
+        font-weight: 800;
+        color: #000;
+        letter-spacing: 2px;
+      }
+
+      .valueContent {
+        h3 {
+          font-size: 26px;
+          margin-bottom: 25px;
+          color: #000;
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: -0.5px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.8;
+          color: #555;
+          font-weight: 300;
+        }
+      }
+
+      // Add a subtle watermark number in the background
+      &::after {
+        content: attr(data-number);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 150px;
+        font-weight: 900;
+        color: #000;
+        opacity: 0.03;
+        line-height: 0.8;
+        z-index: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+/* Split Layouts (Vision & Mission) */
+.visionSection,
+.missionSection {
+  background-color: #fff;
+
+  .splitGrid {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    @include respond-below(md) {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+
+    &.reversed {
+      flex-direction: row-reverse;
+
+      @include respond-below(md) {
+        flex-direction: column;
+      }
+    }
+
+    .imageColumn {
+      flex: 1;
+      width: 100%;
+
+      .imageWrap {
+        width: 100%;
+        aspect-ratio: 4/3;
+        // background: radial-gradient($color-accent1, $color-primary1);
+        // background: linear-gradient(45deg, white, $color-primary1);
+        border-radius: 24px;
+        background-color: #f0f0f0;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .textColumn {
+      flex: 1;
+
+      h2 {
+        font-family: $font-FarmHouse, sans-serif;
+        font-size: 42px;
+        color: #000;
+        margin-bottom: 30px;
+        font-weight: 500;
+        line-height: 1.1;
+
+        @include respond-below(md) {
+          font-size: 32px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #444;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.missionSection {
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* Founder's Message */
+.founderSection {
+  background-color: #fff;
+
+  .founderContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+
+    @include respond-below(md) {
+      flex-direction: column;
+      gap: 50px;
+      text-align: center;
+    }
+
+    .founderImage {
+      flex: 1;
+      border: 2px solid $color-primary1;
+      border-radius: 12px;
+      overflow: hidden;
+
+
+      @include respond-below(md) {
+        width: 70%;
+        // aspect-ratio: 3/4;
+        margin: auto;
+      }
+    }
+
+    .founderText {
+      flex: 1.5;
+      background: linear-gradient(rgba(255, 255, 255, 0.7)), url("/images/logo.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      h2 {
+        font-family: $font-FarmHouse, sans-serif;
+        font-size: 38px;
+        color: $color-primary1;
+        margin-bottom: 30px;
+        font-weight: 500;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .closing {
+        font-family: $font-FarmHouse, sans-serif;
+        font-weight: 500;
+        color: #000;
+        margin-top: 40px;
+        font-size: 24px;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+/* Team Section */
+.teamSection {
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .memberCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    gap: 20px;
+
+    max-width: 550px;
+    margin: auto;
+
+    .memberImage {
+      flex: 0 0 200px;
+      width: 200px;
+      align-self: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      border: 2px solid $color-primary1;
+
+      @include respond-below(md) {
+        flex: 0 0 150px;
+        width: 150px;
+        height: 150px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .memberInfo {
+      flex: 1;
+
+      h3 {
+        font-family: $font-FarmHouse, sans-serif;
+        font-size: 26px;
+        margin-bottom: 8px;
+        color: #000;
+        font-weight: 500;
+      }
+
+      .role {
+        color: #888;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .bio {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #444;
+      }
+    }
+  }
+
+  .advisoryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    margin-top: 40px;
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .advisorCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    @include respond-below(sm) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .advisorImage {
+      flex: 0 0 80px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #f0f0f0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .advisorInfo {
+      flex: 1;
+
+      h3 {
+        font-family: $font-FarmHouse, sans-serif;
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: #000;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #555;
+      }
+    }
+  }
+}

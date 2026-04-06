@@ -1,0 +1,75 @@
+.BrandPromise {
+  background-color: white;
+  padding-top: 100px;
+
+  .wrap {
+    background-color: $color-accent1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .left {
+      background-color: $color-primary1;
+      padding: 50px 50px;
+
+      .cap {
+        font-size: 24px;
+        color: white;
+        font-family: $font-ChickenRice;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+      }
+    }
+
+    .right {
+      img {
+        transform: translate(0px, -80px);
+      }
+
+      > div {
+        transform: translate(0px, -50px);
+        @include flexCenter;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .wrap {
+      display: flex;
+      flex-direction: column;
+
+      .left {
+        padding: 30px 20px 100px 20px;
+      }
+    }
+  }
+}
+
+.PromiseItem {
+  display: flex;
+  gap: 20px;
+
+  * {
+    color: white;
+  }
+  .ico {
+    svg {
+      font-size: 30px;
+      margin-top: 4px;
+    }
+  }
+
+  h5 {
+    font-size: 24px;
+    margin: 0;
+  }
+  p {
+    color: rgb(227, 227, 227);
+  }
+}
