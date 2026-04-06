@@ -44,6 +44,7 @@ const PackshotSection = () => {
                 <div className={styles.packshotWrap}>
                   <div
                     data-aos="fade-right"
+                    className={styles.prodWrap}
                     // data-aos-delay='250'
                   >
                     <Image
@@ -71,7 +72,11 @@ const PackshotSection = () => {
                     />
                   </div>
 
-                  <div data-aos="fade-left" data-aos-delay="300">
+                  <div
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                    className={styles.prodWrap}
+                  >
                     <Image
                       src={`/images/products/${prod.id}/prod2.png`}
                       fluid
