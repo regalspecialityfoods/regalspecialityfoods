@@ -56,13 +56,17 @@ const Footer = () => {
               <Col xs={12} md={6} lg={4}>
                 <div className={`${styles.footerSection} ${styles.contact}`}>
                   <div>
-                    <GeoAltFill /> Regal Specialty Foods,<p>31A , Alamelumangapuram 2nd Cross Madipakkam, </p><p>Chennai - 600091.</p>
+                    <GeoAltFill />  
+                    <b>Regal Specialty Foods & Beverages India Pvt Ltd</b>
+                    <p>Sri Sastha I Floor,</p>
+                    <p>31A , Alamelumangapuram II Cross,</p>
+                    <p>Madipakkam, Chennai - 600091.</p>
                   </div>
                   <div>
-                    <TelephoneFill /> 98848 60485
+                    <TelephoneFill /> +91 44 7967 3426
                   </div>
                   <div>
-                    <EnvelopeAtFill /> sales@regalspecialtyfoods.com
+                    <EnvelopeAtFill /> reachus@regalspecialtyfoods.com
                     {/* <Link href={`mailto:${CONATCT_DETAILS.email}`}>
                     {CONATCT_DETAILS.email}
                   </Link> */}
