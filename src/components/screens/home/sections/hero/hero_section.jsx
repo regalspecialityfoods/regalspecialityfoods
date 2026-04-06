@@ -6,27 +6,53 @@ import Image from "next/image";
 
 const HeroSection = ({ page, noImg }) => {
   return (
-    <section
-      className={styles.HeroSection}
-      style={{
-        backgroundImage: `url("/images/page${page}/bg.webp")`,
-        // backgroundImage: `url("/images/page${page}/bgp.png")`,
-      }}
-    >
-      <CustomContainer>
-        <div className={styles.cont}>
-          <div
-            className={styles.left}
-            data-aos="fade-right"
-            data-aos-duration="500"
-          >
-            {!noImg && (
-              <Image src={`/images/page${page}/hero.png`} alt="hero" />
-            )}
-          </div>
+    <>
+      <section
+        className={styles.HeroSectionLg}
+        style={{
+          backgroundImage: `url("/images/page${page}/bg.webp")`,
+          // backgroundImage: `url("/images/page${page}/bgp.png")`,
+        }}
+      >
+        <CustomContainer>
+          <div className={styles.cont}>
+            <div
+              className={styles.left}
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
+              {!noImg && (
+                <Image src={`/images/page${page}/hero.png`} alt="hero" />
+              )}
+            </div>
 
-          <div className={styles.right}>
-            <div className={styles.bg}></div>
+            <div className={styles.right}>
+              <div className={styles.bg}></div>
+              <h1 data-aos="fade-left" data-aos-delay="200">
+                Fueling Families
+              </h1>
+              <div className={styles.nat}>
+                <h2 data-aos="fade-right" data-aos-delay="200">
+                  Naturally
+                </h2>
+                <p data-aos="zoom-in" data-aos-delay="200">
+                  At Regal Specialty Foods, we believe nutrition should work
+                  quietly, consistently, and personally. Our superfood-based
+                  beverage blends, made from millets, cereals, and herbs, are
+                  thoughtfully designed for men, women, and children. By
+                  combining traditional Indian wisdom with modern nutritional
+                  science, we support everyday wellness in a way that fits
+                  naturally into daily life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+
+      <section className={styles.HeroSectionSm}>
+        <CustomContainer>
+          <div className={styles.top}>
             <h1 data-aos="fade-left" data-aos-delay="200">
               Fueling Families
             </h1>
@@ -45,9 +71,17 @@ const HeroSection = ({ page, noImg }) => {
               </p>
             </div>
           </div>
-        </div>
-      </CustomContainer>
-    </section>
+        </CustomContainer>
+
+        <div
+          className={styles.bottom}
+          style={{
+            backgroundImage: `url("/images/page${page}/bg_small.png")`,
+            // backgroundImage: `url("/images/page${page}/bgp.png")`,
+          }}
+        ></div>
+      </section>
+    </>
   );
 };
 

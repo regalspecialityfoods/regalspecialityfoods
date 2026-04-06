@@ -1,4 +1,4 @@
-.HeroSection {
+.HeroSectionLg {
   height: 100vh;
   max-width: 100dvw;
   overflow: hidden;
@@ -87,6 +87,7 @@
   }
 
   @include respond-below(md) {
+    display: none;
     background-size: 100%;
     background-size: cover;
     height: fit-content;
@@ -123,5 +124,65 @@
         }
       }
     }
+  }
+}
+
+.HeroSectionSm {
+  display: none;
+  position: relative;
+  background-color: #eeeeec;
+
+  .top {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-image: url("/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 63vh;
+
+    @include flexCenter;
+    flex-direction: column;
+
+    h1 {
+      font-family: "FarmHouse", sans-serif;
+      font-weight: 400;
+      font-size: 45px;
+      letter-spacing: 2px;
+      z-index: 10;
+      margin: 0;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    .nat {
+      // max-width: 300px;
+      font-weight: 300;
+      // letter-spacing: 1px;
+      // z-index: 10;
+      // text-align: center;
+      margin-left: 132px;
+
+      h2 {
+        color: green;
+        font-size: 55px;
+        font-weight: 200;
+
+        margin-top: -15px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .bottom {
+    height: 37vh;
+    background-size: cover;
+  }
+
+  @include respond-below(md) {
+    display: block;
   }
 }
