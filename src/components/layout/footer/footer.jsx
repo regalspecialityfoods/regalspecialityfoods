@@ -14,14 +14,12 @@ import SocialMedia from "@/components/ui/social_media/social_media";
 import Newsletter from "./newsletter";
 
 const Footer = () => {
-
   // Regal Specialty Foods, 31A , Alamelumangapuram 2nd Cross Madipakkam, Chennai, PIN 600091 Tamil Nadu, India. M: 98848 60485
 
   return (
     <>
       <Newsletter />
       <footer className={styles.Footer}>
-
         <CustomContainer>
           <div className={styles.top}>
             <Row>
@@ -37,7 +35,7 @@ const Footer = () => {
                   <SocialMedia />
                 </div>
               </Col>
-              <Col xs={12} md={6} lg={4}>
+              <Col xs={12} md={6} lg={3} xl={4}>
                 <div className={`${styles.footerSection} ${styles.link}`}>
                   {PAGES.map((page) => {
                     if (page.hidden) {
@@ -53,10 +51,10 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col xs={12} md={6} lg={4}>
+              <Col xs={12} md={6} lg={5} xl={4}>
                 <div className={`${styles.footerSection} ${styles.contact}`}>
                   <div>
-                    <GeoAltFill />  
+                    <GeoAltFill />
                     <b>Regal Specialty Foods & Beverages India Pvt Ltd</b>
                     <p>CIN U46309TN2026PTC190729</p>
                     <p>Sri Sastha I Floor,</p>
@@ -68,10 +66,10 @@ const Footer = () => {
                     <TelephoneFill /> +91 44 7967 3426
                   </div>
                   <div>
-                    <EnvelopeAtFill /> reachus@regalspecialtyfoods.com
-                    {/* <Link href={`mailto:${CONATCT_DETAILS.email}`}>
-                    {CONATCT_DETAILS.email}
-                  </Link> */}
+                    <EnvelopeAtFill /> 
+                    <Link href={`mailto:reachus@regalspecialtyfoods.com`}>
+                      reachus@regalspecialtyfoods.com
+                    </Link>
                   </div>
                 </div>
               </Col>

@@ -28,15 +28,23 @@
     }
 
     &.contact {
-      >div {
+      > div {
         font-size: 16px;
         margin-bottom: 12px;
 
         color: $color-accent1;
-
+        b {
+          font-size: 15px;
+        }
 
         p {
           margin-left: 32px;
+          font-size: 15px;
+        }
+
+        a {
+          color: $color_accent1;
+          font-size: 15px;
         }
 
         svg {
