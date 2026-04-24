@@ -1,0 +1,31 @@
+.legalScreen {
+  padding: 50px 0;
+  max-width: 1000px;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    text-decoration: underline;
+  }
+
+  h2,
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  b {
+    font-weight: 700;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+}
