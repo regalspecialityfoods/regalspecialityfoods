@@ -12,13 +12,38 @@ import { PAGES } from "@/constants/constants";
 import SocialMedia from "@/components/ui/social_media/social_media";
 
 import Newsletter from "./newsletter";
+import { useRouter } from "next/router";
 
 const Footer = () => {
-  // Regal Specialty Foods, 31A , Alamelumangapuram 2nd Cross Madipakkam, Chennai, PIN 600091 Tamil Nadu, India. M: 98848 60485
+
+  const router = useRouter()
+
+  const legalPages = [
+    {
+      title: "Terms & Conditions",
+      href: "/terms-and-conditions",
+    },
+
+    {
+      title: "Privacy Policy",
+      href: "/privacy-policy",
+    },
+    {
+      title: "Cancellation Policy",
+      href: "/cancellation-policy",
+    },
+  ];
+
+  
+
+  const isLegalPage = legalPages.some(p=> p.href === router.pathname)
+  
 
   return (
     <>
-      <Newsletter />
+      {
+        !isLegalPage && <Newsletter />
+      }
       <footer className={styles.Footer}>
         <CustomContainer>
           <div className={styles.top}>
@@ -66,7 +91,7 @@ const Footer = () => {
                     <TelephoneFill /> +91 44 7967 3426
                   </div>
                   <div>
-                    <EnvelopeAtFill /> 
+                    <EnvelopeAtFill />
                     <Link href={`mailto:reachus@regalspecialtyfoods.com`}>
                       reachus@regalspecialtyfoods.com
                     </Link>
@@ -76,7 +101,13 @@ const Footer = () => {
             </Row>
           </div>
           <div className={styles.bot}>
-            <p>©. All Rights Reserved. Licensing</p>
+            {
+              legalPages.map((lp)=>{
+               return <Link key={lp.title} href={lp.href}>
+                <p>{lp.title}</p>
+               </Link>
+              })
+            }
           </div>
         </CustomContainer>
       </footer>
