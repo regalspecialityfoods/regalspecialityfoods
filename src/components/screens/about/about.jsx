@@ -34,7 +34,13 @@ const AboutScreen = () => {
       about:
         "Senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development.",
       image: "/images/leaders/nirupama.jpeg",
-
+    },
+    {
+      name: "Bala Jambunathan",
+      designation: "Chief Financial Officer",
+      about:
+        "Bala Jambunathan is a seasoned financial expert with decades of experience in fiscal strategy and operations. An ICWA and commerce graduate, she has led major real estate portfolios with precision.",
+      image: "/images/leaders/Bala Jambunathan.jpeg",
     },
   ];
 
