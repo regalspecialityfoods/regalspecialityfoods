@@ -3,407 +3,410 @@
 @import "@/styles/scss/mixins";
 
 .ItsAboutYouScreen {
-    background-color: #fff;
-    color: #1a1a1a;
-    overflow-x: hidden;
-    font-family: inherit;
+  background-color: #fff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  font-family: inherit;
 
-    section {
-        padding: 100px 0;
+  section {
+    padding: 100px 0;
 
-        @include respond-below(md) {
-            padding: 70px 0;
-        }
+    @include respond-below(md) {
+      padding: 70px 0;
+    }
+  }
+
+  .overline {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include respond-below(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .sectionTitle {
+    font-family: $font-ChickenRice, sans-serif;
+    font-size: 40px;
+    color: $color-primary1;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin: 0;
+
+    @include respond-below(md) {
+      font-size: 30px;
+    }
+  }
+
+  /* Hero Section */
+  .heroSection {
+    background-color: #000000;
+    height: 70vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-below(md) {
+      height: 50vh;
     }
 
-    .overline {
-        display: block;
-        font-size: 11px;
-        letter-spacing: 3px;
-        color: #888;
-        margin-bottom: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
+    .heroImageBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
     }
 
-    .sectionHeader {
-        text-align: center;
-        margin-bottom: 60px;
+    .heroContent {
+      position: relative;
+      z-index: 2;
+      // max-width: 800px;
+      padding: 0 20px;
+      text-align: center;
 
-        @include respond-below(md) {
-            margin-bottom: 40px;
-        }
-    }
-
-    .sectionTitle {
+      h2 {
         font-family: $font-ChickenRice, sans-serif;
-        font-size: 40px;
+        font-size: 56px;
         color: $color-primary1;
-        font-weight: 500;
-        letter-spacing: -0.5px;
         margin: 0;
+        line-height: 1.1;
+        font-weight: 500;
 
         @include respond-below(md) {
-            font-size: 30px;
+          font-size: 38px;
         }
+      }
+
+      .subHeader {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+      }
+    }
+  }
+
+  /* Brand Detail Section */
+  .detailSection {
+    .contentWrap {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      h3 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #333;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+        @include respond-below(md) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  /* Belief Grid */
+  .beliefSection {
+    background-color: #fdfdfd;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba($color-primary1, 0.03) 0%,
+        transparent 70%
+      );
+      z-index: -1;
+      pointer-events: none;
     }
 
-    /* Hero Section */
-    .heroSection {
-        background-color: #000000;
-        height: 70vh;
-        min-height: 400px;
+    .beliefGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+
+      @include respond-below(md) {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
+
+    .beliefItem {
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $color-primary1;
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+        transform-origin: left;
+      }
+
+      .iconBox {
+        width: 76px;
+        height: 76px;
+        background: rgba($color-primary1, 0.05);
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 auto 30px;
+        color: $color-primary1;
+        font-size: 32px;
+        transition: all 0.4s ease;
+
+        svg {
+          stroke-width: 0.5px;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
+        border-color: rgba($color-primary1, 0.1);
+
+        &::before {
+          transform: scaleX(1);
+        }
+
+        .iconBox {
+          background: $color-primary1;
+          color: #fff;
+          transform: rotateY(180deg);
+        }
+      }
+
+      h4 {
+        font-family: $font-ChickenRice, sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: $color-primary1;
+        letter-spacing: 0.5px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.7;
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+
+    .beliefSubText {
+      margin-top: 20px;
+      color: #666;
+    }
+
+    .beliefBottomContent {
+      text-align: center;
+      margin-top: 60px;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .beliefQuote {
+      font-size: 30px;
+      color: #444;
+      font-weight: 800;
+      font-style: italic;
+
+      @include respond-below(md) {
+        font-size: 24px;
+      }
+    }
+
+    .beliefDescription {
+      font-size: 20px;
+      color: #666;
+
+      @include respond-below(md) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  /* Split Layout Sections */
+  .splitSection {
+    .splitGrid {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+
+      @include respond-below(md) {
+        flex-direction: column;
+        gap: 40px;
         text-align: center;
-        position: relative;
-        overflow: hidden;
+      }
+
+      &.reversed {
+        flex-direction: row-reverse;
 
         @include respond-below(md) {
-            height: 50vh;
+          flex-direction: column;
         }
+      }
 
-        .heroImageBg {
-            position: absolute;
-            top: 0;
-            left: 0;
+      .imageSide {
+        flex: 1;
+
+        .imageWrap {
+          width: 100%;
+          // aspect-ratio: 16/10;
+          background-color: #f0f0f0;
+          overflow: hidden;
+          border-radius: 4px;
+
+          img {
             width: 100%;
             height: 100%;
-            z-index: 1;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                opacity: 0.5;
-            }
+            object-fit: cover;
+          }
         }
+      }
 
-        .heroContent {
-            position: relative;
-            z-index: 2;
-            // max-width: 800px;
-            padding: 0 20px;
-            text-align: center;
+      .textSide {
+        flex: 1;
 
-            h2 {
-                font-family: $font-ChickenRice, sans-serif;
-                font-size: 56px;
-                color: $color-primary1;
-                margin: 0;
-                line-height: 1.1;
-                font-weight: 500;
+        h2 {
+          font-family: $font-ChickenRice, sans-serif;
+          font-size: 38px;
+          color: #000;
+          margin-bottom: 25px;
+          line-height: 1.2;
 
-                @include respond-below(md) {
-                    font-size: 38px;
-                }
-            }
-
-            .subHeader {
-                font-size: 14px;
-                letter-spacing: 4px;
-                margin-bottom: 20px;
-                color: rgba(255, 255, 255, 0.7);
-                text-transform: uppercase;
-                font-weight: 600;
-                display: block;
-            }
-        }
-    }
-
-    /* Brand Detail Section */
-    .detailSection {
-        .contentWrap {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-
-            h3 {
-                font-size: 28px;
-                margin-bottom: 30px;
-                font-weight: 600;
-                color: #000;
-            }
-
-            p {
-                font-size: 20px;
-                line-height: 1.8;
-                color: #333;
-                font-weight: 300;
-                margin-bottom: 30px;
-
-                @include respond-below(md) {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    /* Belief Grid */
-    .beliefSection {
-        background-color: #fdfdfd;
-        position: relative;
-        z-index: 1;
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba($color-primary1, 0.03) 0%, transparent 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .beliefGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-
-            @include respond-below(md) {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        .beliefItem {
-            background: #fff;
-            padding: 50px 40px;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-            overflow: hidden;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                background-color: $color-primary1;
-                transform: scaleX(0);
-                transition: transform 0.4s ease;
-                transform-origin: left;
-            }
-
-            .iconBox {
-                width: 76px;
-                height: 76px;
-                background: rgba($color-primary1, 0.05);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto 30px;
-                color: $color-primary1;
-                font-size: 32px;
-                transition: all 0.4s ease;
-
-                svg {
-                    stroke-width: 0.5px;
-                }
-            }
-
-            &:hover {
-
-                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
-                border-color: rgba($color-primary1, 0.1);
-
-                &::before {
-                    transform: scaleX(1);
-                }
-
-                .iconBox {
-                    background: $color-primary1;
-                    color: #fff;
-                    transform: rotateY(180deg);
-                }
-            }
-
-            h4 {
-                font-family: $font-ChickenRice, sans-serif;
-                font-size: 22px;
-                font-weight: 500;
-                margin-bottom: 20px;
-                color: $color-primary1;
-                letter-spacing: 0.5px;
-            }
-
-            p {
-                font-size: 16px;
-                color: #666;
-                line-height: 1.7;
-                margin: 0;
-                font-weight: 300;
-            }
-        }
-
-        .beliefSubText {
-            margin-top: 20px;
-            color: #666;
-        }
-
-        .beliefBottomContent {
-            text-align: center;
-            margin-top: 60px;
-            max-width: 800px;
-            margin-inline: auto;
-        }
-
-        .beliefQuote {
+          @include respond-below(md) {
             font-size: 30px;
-            color: #444;
-            font-weight: 800;
-            font-style: italic;
-
-            @include respond-below(md) {
-                font-size: 24px;
-            }
+          }
         }
 
-        .beliefDescription {
-            font-size: 20px;
-            color: #666;
+        p {
+          font-size: 17px;
+          line-height: 1.8;
+          color: #444;
+          margin-bottom: 20px;
+          font-weight: 300;
 
-            @include respond-below(md) {
-                font-size: 18px;
-            }
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
+      }
+    }
+  }
+
+  .darkSection {
+    background-color: #fafafa;
+  }
+
+  /* Quality Section */
+  .qualitySection {
+    background-color: #fdfdfd;
+    border-top: 1px solid #eee;
+
+    .qualityContent {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 30px;
+      }
     }
 
-    /* Split Layout Sections */
-    .splitSection {
-        .splitGrid {
-            display: flex;
-            align-items: center;
-            gap: 80px;
+    .badgesGrid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+      flex-wrap: wrap;
 
-            @include respond-below(md) {
-                flex-direction: column;
-                gap: 40px;
-                text-align: center;
-            }
+      .badgeItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
 
-            &.reversed {
-                flex-direction: row-reverse;
-
-                @include respond-below(md) {
-                    flex-direction: column;
-                }
-            }
-
-            .imageSide {
-                flex: 1;
-
-                .imageWrap {
-                    width: 100%;
-                    aspect-ratio: 16/10;
-                    background-color: #f0f0f0;
-                    overflow: hidden;
-                    border-radius: 4px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-
-            .textSide {
-                flex: 1;
-
-                h2 {
-                    font-family: $font-ChickenRice, sans-serif;
-                    font-size: 38px;
-                    color: #000;
-                    margin-bottom: 25px;
-                    line-height: 1.2;
-
-                    @include respond-below(md) {
-                        font-size: 30px;
-                    }
-                }
-
-                p {
-                    font-size: 17px;
-                    line-height: 1.8;
-                    color: #444;
-                    margin-bottom: 20px;
-                    font-weight: 300;
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    .darkSection {
-        background-color: #fafafa;
-    }
-
-    /* Quality Section */
-    .qualitySection {
-        background-color: #fdfdfd;
-        border-top: 1px solid #eee;
-
-        .qualityContent {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-
-            p {
-                font-size: 18px;
-                line-height: 1.8;
-                color: #555;
-                margin-bottom: 30px;
-            }
+        .iconWrap {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          border: 1px solid #eee;
+          border-radius: 50%;
+          font-weight: 700;
+          font-size: 12px;
+          color: $color-primary1;
         }
 
-        .badgesGrid {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-
-            .badgeItem {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-
-                .iconWrap {
-                    width: 60px;
-                    height: 60px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: #fff;
-                    border: 1px solid #eee;
-                    border-radius: 50%;
-                    font-weight: 700;
-                    font-size: 12px;
-                    color: $color-primary1;
-                }
-
-                span {
-                    font-size: 12px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                }
-            }
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
+      }
     }
+  }
 }

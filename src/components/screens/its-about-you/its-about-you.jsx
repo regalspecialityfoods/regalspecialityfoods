@@ -84,7 +84,7 @@ const ItsAboutYouScreen = () => {
                     <div className={styles.splitGrid}>
                         <div className={styles.imageSide} data-aos="fade-right">
                             <div className={styles.imageWrap}>
-                                <Image src="/images/brand/philosophy.png" alt="Revitalising Philosophy" />
+                                <Image src="/images/brand/revitalising_philosophy.webp" alt="Revitalising Philosophy" />
                             </div>
                         </div>
                         <div className={styles.textSide} data-aos="fade-left">
@@ -107,17 +107,17 @@ const ItsAboutYouScreen = () => {
                     <div className={`${styles.splitGrid} ${styles.reversed}`}>
                         <div className={styles.imageSide} data-aos="fade-left">
                             <div className={styles.imageWrap}>
-                                <Image src="/images/brand/lifestyle.png" alt="Why Choose It’s About You" />
+                                <Image src="/images/brand/why_is_about_you.webp" alt="Why Choose It’s About You" />
                             </div>
                         </div>
                         <div className={styles.textSide} data-aos="fade-right">
                             <span className={styles.overline}>CONSISTENT HABITS</span>
-                            <h2>Why Choose It’s About You</h2>
+                            <h2>Why Choose It&apos;s About You</h2>
                             <p>
                                 Regal believes that true wellness is built through small, consistent habits. Modern families move through busy mornings, demanding days, and the need for calm at the end of each evening.
                             </p>
                             <p>
-                                The It’s About You range reflects this rhythm — offering blends designed to integrate seamlessly into everyday routines, whether enjoyed warm as a comforting ritual or cold as a refreshing drink.
+                                The It&apos;s About You range reflects this rhythm — offering blends designed to integrate seamlessly into everyday routines, whether enjoyed warm as a comforting ritual or cold as a refreshing drink.
                             </p>
                             <p>
                                 Each blend is created with care to support the unique needs of men, women, and children, focusing on steady nourishment rather than short-term solutions.
@@ -133,14 +133,14 @@ const ItsAboutYouScreen = () => {
                     <div className={styles.splitGrid}>
                         <div className={styles.imageSide} data-aos="fade-right">
                             <div className={styles.imageWrap}>
-                                <Image src="/images/brand/crafted.png" alt="Crafted With Wellness in Mind" />
+                                <Image src="/images/brand/wellness_in_mind.webp" alt="Crafted With Wellness in Mind" />
                             </div>
                         </div>
                         <div className={styles.textSide} data-aos="fade-left">
                             <span className={styles.overline}>BALANCED NOURISHMENT</span>
                             <h2>Crafted With Wellness in Mind</h2>
                             <p>
-                                Every It’s About You blend reflects Regal’s philosophy of balanced nourishment. Carefully selected millets, cereals, and functional herbs come together to create formulations that feel light, adaptable, and suitable for regular use.
+                                Every It&apos;s About You blend reflects Regal&apos;s philosophy of balanced nourishment. Carefully selected millets, cereals, and functional herbs come together to create formulations that feel light, adaptable, and suitable for regular use.
                             </p>
                             <p>
                                 The focus is not on complexity, but on consistency — creating blends that families can rely on as part of their daily wellness journey.
@@ -156,7 +156,7 @@ const ItsAboutYouScreen = () => {
                     <div className={`${styles.splitGrid} ${styles.reversed}`}>
                         <div className={styles.imageSide} data-aos="fade-left">
                             <div className={styles.imageWrap}>
-                                <Image src="/images/brand/balance.png" alt="The Regal Philosophy" />
+                                <Image src="/images/brand/regal_philosophy.webp" alt="The Regal Philosophy" />
                             </div>
                         </div>
                         <div className={styles.textSide} data-aos="fade-right">
