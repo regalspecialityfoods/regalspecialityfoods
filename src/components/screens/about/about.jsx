@@ -188,14 +188,47 @@ const AboutScreen = () => {
         </CustomContainer>
       </section>
 
-      {/* Founder's Message Section */}
+      {/* Managing Director & CEO Message Section */}
       <section className={styles.founderSection}>
         <CustomContainer>
           <div className={styles.founderContent}>
             <div className={styles.founderImage} data-aos="fade-right">
-              <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
+              <Image
+                src="/images/leaders/ashok.jpeg"
+                alt="Ashok Namboodiri"
+                fluid
+              />
             </div>
             <div className={styles.founderText} data-aos="fade-left">
+              <span className={styles.overline}>MESSAGE FROM THE CEO</span>
+              <h2>Ashok Namboodiri</h2>
+              <p>
+                An accomplished global business leader with 25+ years of
+                experience across Media, Consumer Goods and Sports categories
+                spanning emerging markets - India, Middle East and Africa - he
+                has a proven track record of scaling businesses, building teams,
+                launching new categories, and driving international expansion.
+              </p>
+              <p>
+                He is known for his pioneering work in sports regionalization,
+                forging global partnerships, and mentoring next-generation
+                leaders besides his appetite for exploring new challenges.
+              </p>
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+
+      {/* Founder's Message Section */}
+      <section className={`${styles.founderSection} ${styles.ceoSection}`}>
+        <CustomContainer>
+          <div
+            className={`${styles.founderContent} ${styles.reversed} ${styles.smaller}`}
+          >
+            <div className={styles.founderImage} data-aos="fade-left">
+              <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
+            </div>
+            <div className={styles.founderText} data-aos="fade-right">
               <span className={styles.overline}>WORDS FROM THE FOUNDER</span>
               <h2>Mr. Anantha Krishnan</h2>
               <p>
@@ -217,41 +250,8 @@ const AboutScreen = () => {
                 long-term wellbeing.
               </p>
               <p className={styles.closing}>
-                Regal is not built for quick trends. It is built for
-                generations.
-              </p>
-            </div>
-          </div>
-        </CustomContainer>
-      </section>
-
-      {/* Managing Director & CEO Message Section */}
-      <section className={`${styles.founderSection} ${styles.ceoSection}`}>
-        <CustomContainer>
-          <div
-            className={`${styles.founderContent} ${styles.reversed} ${styles.smaller}`}
-          >
-            <div className={styles.founderImage} data-aos="fade-left">
-              <Image
-                src="/images/leaders/ashok.jpeg"
-                alt="Ashok Namboodiri"
-                fluid
-              />
-            </div>
-            <div className={styles.founderText} data-aos="fade-right">
-              <span className={styles.overline}>MESSAGE FROM THE CEO</span>
-              <h2>Ashok Namboodiri</h2>
-              <p>
-                An accomplished global business leader with 25+ years of
-                experience across Media, Consumer Goods and Sports categories
-                spanning emerging markets - India, Middle East and Africa - he
-                has a proven track record of scaling businesses, building teams,
-                launching new categories, and driving international expansion.
-              </p>
-              <p>
-                He is known for his pioneering work in sports regionalization,
-                forging global partnerships, and mentoring next-generation
-                leaders besides his appetite for exploring new challenges.
+                &quot;Regal is not built for quick trends. It is built for
+                generations.&quot;
               </p>
             </div>
           </div>
