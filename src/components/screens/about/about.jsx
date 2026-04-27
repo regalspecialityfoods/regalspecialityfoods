@@ -1,46 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./about.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image } from "react-bootstrap";
 
 const AboutScreen = () => {
+  const [expandedLeaders, setExpandedLeaders] = useState({});
+
+  const toggleLeader = (name) => {
+    setExpandedLeaders((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
+
   const leaders = [
     {
-      name: "Keerthana Ananthakrishnan",
-      designation: "Co-Founder & CEO",
+      name: "Ashok Namboodiri",
+      designation: "Managing Director & CEO",
       about:
-        "With a Master's degree in Food Technology & Science, Keerthana leads product development, nutrition research, and long-term brand strategy, focusing on creating clean and effective nutrition solutions.",
-      image: "/images/leaders/keerthana.jpeg",
+        "An accomplished global business leader with 25+ years of experience across Media, Consumer Goods and Sports categories spanning emerging markets - India, Middle East and Africa - he has a proven track record of scaling businesses, building teams, launching new categories, and driving international expansion. He is known for his pioneering work in sports regionalization, forging global partnerships, and mentoring next-generation leaders besides his appetite for exploring new challenges.",
+      image: "/images/leaders/ashok.jpeg",
     },
     {
       name: "Ananthakrishnan Subramanian",
-      designation: "Chief Sales Officer",
+      designation: "Founder & Chief Operating Officer",
       about:
-        "With over 27 years of leadership experience across global FMCG brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion.",
+        "With over 27 years of leadership experience in the FMCG sector handling brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion. He is a strong advocate for talent development, adept at articulating organizational missions and guiding teams to achieve ambitious goals. His strengths lie in strategic planning and effective communication, always pushing boundaries and transforming potential into performance.",
       image: "/images/leaders/ananth.jpeg",
-
-    },
-    {
-      name: "Ashok Namboodiri",
-      designation: "Advisory Board",
-      about:
-        "Global media and business leader with extensive experience in brand building, strategy, and communications.",
-      image: "/images/leaders/ashok.jpeg",
-
-    },
-    {
-      name: "Nirupama Srinivasa Desikan",
-      designation: "Advisory Board",
-      about:
-        "Senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development.",
-      image: "/images/leaders/nirupama.jpeg",
     },
     {
       name: "Bala Jambunathan",
       designation: "Chief Financial Officer",
       about:
-        "Bala Jambunathan is a seasoned financial expert with decades of experience in fiscal strategy and operations. An ICWA and commerce graduate, she has led major real estate portfolios with precision.",
+        "Bala Jambunathan is a seasoned financial powerhouse with decades of expertise in fiscal strategy and operational excellence. A qualified Cost and Management Accountant (ICWA) with a degree in Commerce, Bala brings a precision-based approach to financial architecture. Prior to her current role, she served as a pivotal leader in the real estate sector, overseeing a diverse portfolio of premium malls, residential complexes, and commercial properties. Beyond the boardroom, Bala is a passionate singer and an avid traveler who finds inspiration in exploring new cultures.",
       image: "/images/leaders/Bala Jambunathan.jpeg",
+    },
+    {
+      name: "Nirupama Srinivasa Desikan",
+      designation: "Chief Scientist and Chief Product Officer",
+      about:
+        "Nirupama is a senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development. A food technologist from CFTRI she has more than 14 years of experience in developing and standardising new products across categories in the F&V, cereal and grain segments. Key categories that she excels in include fruit-based beverages, breakfast cereals, cookies, ready to cook products, jams, culinary pastes, extruded snacks, flaked cereals/grains, noodles, etc.",
+      image: "/images/leaders/nirupama.jpeg",
+    },
+    {
+      name: "Keerthana Ananthakrishnan",
+      designation: "Head of Operations",
+      about:
+        "With a masters degree in food technology & science, Keerthana leads product development, nutrition research, and long-term brand strategy, focusing on creating clean and effective nutrition solutions. Detail-oriented and results-driven, her approach is rooted in strong communication, relationship-building, and a deep sense of ownership toward every task she undertakes. She believes that great results come from genuine connections, consistent effort, and a mindset focused on quality.",
+      image: "/images/leaders/keerthana.jpeg",
     },
   ];
 
@@ -259,135 +266,27 @@ const AboutScreen = () => {
                   <div className={styles.memberInfo}>
                     <h3>{leader.name}</h3>
                     <p className={styles.role}>{leader.designation}</p>
-                    <p className={styles.bio}>{leader.about}</p>
+                    <p
+                      className={`${styles.bio} ${
+                        !expandedLeaders[leader.name] ? styles.truncated : ""
+                      }`}
+                    >
+                      {leader.about}
+                    </p>
+                    <button
+                      className={styles.readMoreBtn}
+                      onClick={() => toggleLeader(leader.name)}
+                    >
+                      {expandedLeaders[leader.name] ? "Read Less" : "Read More"}
+                    </button>
                   </div>
                 </div>
               );
             })}
-            {/* <div className={styles.memberCard} data-aos="fade-up">
-              <div className={styles.memberImage}>
-                <Image
-                  src="/images/team/keerthana.png"
-                  alt="Keerthana Ananthakrishnan"
-                />
-              </div>
-              <div className={styles.memberInfo}>
-                <h3>Keerthana Ananthakrishnan</h3>
-                <p className={styles.role}>Co-Founder & CEO</p>
-                <p className={styles.bio}>
-                  With a Master’s degree in Food Technology & Science, Keerthana
-                  leads product development, nutrition research, and long-term
-                  brand strategy, focusing on creating clean and effective
-                  nutrition solutions.
-                </p>
-              </div>
-            </div>
-            <div
-              className={styles.memberCard}
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className={styles.memberImage}>
-                <Image
-                  src="/images/team/ananthakrishnan.png"
-                  alt="Ananthakrishnan Subramanian"
-                />
-              </div>
-              <div className={styles.memberInfo}>
-                <h3>Ananthakrishnan Subramanian</h3>
-                <p className={styles.role}>Chief Sales Officer</p>
-                <p className={styles.bio}>
-                  With over 27 years of leadership experience across global FMCG
-                  brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana,
-                  he brings deep expertise in sales strategy, distribution, and
-                  market expansion.
-                </p>
-              </div>
-            </div>
-            <div className={styles.memberCard} data-aos="fade-up">
-              <div className={styles.memberImage}>
-                <Image
-                  src="/images/team/keerthana.png"
-                  alt="Keerthana Ananthakrishnan"
-                />
-              </div>
-              <div className={styles.memberInfo}>
-                <h3>Keerthana Ananthakrishnan</h3>
-                <p className={styles.role}>Co-Founder & CEO</p>
-                <p className={styles.bio}>
-                  With a Master’s degree in Food Technology & Science, Keerthana
-                  leads product development, nutrition research, and long-term
-                  brand strategy, focusing on creating clean and effective
-                  nutrition solutions.
-                </p>
-              </div>
-            </div>
-            <div
-              className={styles.memberCard}
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className={styles.memberImage}>
-                <Image
-                  src="/images/team/ananthakrishnan.png"
-                  alt="Ananthakrishnan Subramanian"
-                />
-              </div>
-              <div className={styles.memberInfo}>
-                <h3>Ananthakrishnan Subramanian</h3>
-                <p className={styles.role}>Chief Sales Officer</p>
-                <p className={styles.bio}>
-                  With over 27 years of leadership experience across global FMCG
-                  brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana,
-                  he brings deep expertise in sales strategy, distribution, and
-                  market expansion.
-                </p>
-              </div>
-            </div> */}
-          </div>
 
-          {/* <div
-            className={`${styles.sectionHeader} ${styles.mtLarge}`}
-            data-aos="fade-up"
-          >
-            <span className={styles.overline}>GUIDING VOICES</span>
-            <h2 className={styles.sectionTitle}>Advisory Board</h2>
           </div>
 
 
-          <div className={styles.advisoryGrid}>
-            <div className={styles.advisorCard} data-aos="fade-up">
-              <div className={styles.advisorImage}>
-                <Image src="/images/team/ashok.png" alt="Ashok Namboodiri" />
-              </div>
-              <div className={styles.advisorInfo}>
-                <h3>Ashok Namboodiri</h3>
-                <p>
-                  Global media and business leader with extensive experience in
-                  brand building, strategy, and communications.
-                </p>
-              </div>
-            </div>
-            <div
-              className={styles.advisorCard}
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className={styles.advisorImage}>
-                <Image
-                  src="/images/team/nirupama.png"
-                  alt="Nirupama Srinivasa Desikan"
-                />
-              </div>
-              <div className={styles.advisorInfo}>
-                <h3>Nirupama Srinivasa Desikan</h3>
-                <p>
-                  Senior food R&D and innovation leader with deep expertise in
-                  functional foods and nutritional product development.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </CustomContainer>
       </section>
     </div>
