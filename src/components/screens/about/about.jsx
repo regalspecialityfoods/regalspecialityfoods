@@ -15,19 +15,20 @@ const AboutScreen = () => {
 
   const leaders = [
     {
-      name: "Bala Jambunathan",
-      designation: "Chief Financial Officer",
-      about:
-        "Bala Jambunathan is a seasoned financial powerhouse with decades of expertise in fiscal strategy and operational excellence. A qualified Cost and Management Accountant (ICWA) with a degree in Commerce, Bala brings a precision-based approach to financial architecture. Prior to her current role, she served as a pivotal leader in the real estate sector, overseeing a diverse portfolio of premium malls, residential complexes, and commercial properties. Beyond the boardroom, Bala is a passionate singer and an avid traveler who finds inspiration in exploring new cultures.",
-      image: "/images/leaders/Bala Jambunathan.jpeg",
-    },
-    {
       name: "Nirupama Srinivasa Desikan",
       designation: "Chief Scientist and Chief Product Officer",
       about:
         "Nirupama is a senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development. A food technologist from CFTRI she has more than 14 years of experience in developing and standardising new products across categories in the F&V, cereal and grain segments. Key categories that she excels in include fruit-based beverages, breakfast cereals, cookies, ready to cook products, jams, culinary pastes, extruded snacks, flaked cereals/grains, noodles, etc.",
       image: "/images/leaders/nirupama.jpeg",
     },
+    {
+      name: "Bala Jambunathan",
+      designation: "Chief Financial Officer",
+      about:
+        "Bala Jambunathan is a seasoned financial powerhouse with decades of expertise in fiscal strategy and operational excellence. A qualified Cost and Management Accountant (ICWA) with a degree in Commerce, Bala brings a precision-based approach to financial architecture. Prior to her current role, she served as a pivotal leader in the real estate sector, overseeing a diverse portfolio of premium malls, residential complexes, and commercial properties. Beyond the boardroom, Bala is a passionate singer and an avid traveler who finds inspiration in exploring new cultures.",
+      image: "/images/leaders/Bala Jambunathan.jpeg",
+    },
+
     {
       name: "Keerthana Ananthakrishnan",
       designation: "Head of Operations",
