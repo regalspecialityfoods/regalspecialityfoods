@@ -319,11 +319,40 @@
       border-radius: 12px;
       overflow: hidden;
 
-
       @include respond-below(md) {
         width: 70%;
-        // aspect-ratio: 3/4;
         margin: auto;
+      }
+    }
+
+    &.reversed {
+      flex-direction: row-reverse;
+
+      @include respond-below(md) {
+        flex-direction: column;
+      }
+    }
+
+    &.smaller {
+      gap: 60px;
+
+      .founderImage {
+        flex: 0 0 350px;
+
+        @include respond-below(md) {
+          flex: 1;
+          width: 60%;
+        }
+      }
+
+      .founderText {
+        h2 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 16px;
+        }
       }
     }
 
@@ -372,6 +401,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
+
+
 
     @include respond-below(md) {
       grid-template-columns: 1fr;

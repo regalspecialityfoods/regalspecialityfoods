@@ -15,20 +15,6 @@ const AboutScreen = () => {
 
   const leaders = [
     {
-      name: "Ashok Namboodiri",
-      designation: "Managing Director & CEO",
-      about:
-        "An accomplished global business leader with 25+ years of experience across Media, Consumer Goods and Sports categories spanning emerging markets - India, Middle East and Africa - he has a proven track record of scaling businesses, building teams, launching new categories, and driving international expansion. He is known for his pioneering work in sports regionalization, forging global partnerships, and mentoring next-generation leaders besides his appetite for exploring new challenges.",
-      image: "/images/leaders/ashok.jpeg",
-    },
-    {
-      name: "Ananthakrishnan Subramanian",
-      designation: "Founder & Chief Operating Officer",
-      about:
-        "With over 27 years of leadership experience in the FMCG sector handling brands including Cadbury, Kellogg’s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion. He is a strong advocate for talent development, adept at articulating organizational missions and guiding teams to achieve ambitious goals. His strengths lie in strategic planning and effective communication, always pushing boundaries and transforming potential into performance.",
-      image: "/images/leaders/ananth.jpeg",
-    },
-    {
       name: "Bala Jambunathan",
       designation: "Chief Financial Officer",
       about:
@@ -208,7 +194,6 @@ const AboutScreen = () => {
           <div className={styles.founderContent}>
             <div className={styles.founderImage} data-aos="fade-right">
               <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
-
             </div>
             <div className={styles.founderText} data-aos="fade-left">
               <span className={styles.overline}>WORDS FROM THE FOUNDER</span>
@@ -234,6 +219,39 @@ const AboutScreen = () => {
               <p className={styles.closing}>
                 Regal is not built for quick trends. It is built for
                 generations.
+              </p>
+            </div>
+          </div>
+        </CustomContainer>
+      </section>
+
+      {/* Managing Director & CEO Message Section */}
+      <section className={`${styles.founderSection} ${styles.ceoSection}`}>
+        <CustomContainer>
+          <div
+            className={`${styles.founderContent} ${styles.reversed} ${styles.smaller}`}
+          >
+            <div className={styles.founderImage} data-aos="fade-left">
+              <Image
+                src="/images/leaders/ashok.jpeg"
+                alt="Ashok Namboodiri"
+                fluid
+              />
+            </div>
+            <div className={styles.founderText} data-aos="fade-right">
+              <span className={styles.overline}>MESSAGE FROM THE CEO</span>
+              <h2>Ashok Namboodiri</h2>
+              <p>
+                An accomplished global business leader with 25+ years of
+                experience across Media, Consumer Goods and Sports categories
+                spanning emerging markets - India, Middle East and Africa - he
+                has a proven track record of scaling businesses, building teams,
+                launching new categories, and driving international expansion.
+              </p>
+              <p>
+                He is known for his pioneering work in sports regionalization,
+                forging global partnerships, and mentoring next-generation
+                leaders besides his appetite for exploring new challenges.
               </p>
             </div>
           </div>
@@ -267,9 +285,8 @@ const AboutScreen = () => {
                     <h3>{leader.name}</h3>
                     <p className={styles.role}>{leader.designation}</p>
                     <p
-                      className={`${styles.bio} ${
-                        !expandedLeaders[leader.name] ? styles.truncated : ""
-                      }`}
+                      className={`${styles.bio} ${!expandedLeaders[leader.name] ? styles.truncated : ""
+                        }`}
                     >
                       {leader.about}
                     </p>
