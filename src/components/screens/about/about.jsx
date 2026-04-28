@@ -19,7 +19,7 @@ const AboutScreen = () => {
       designation: "Chief Scientist and Chief Product Officer",
       about:
         "Nirupama is a senior food R&D and innovation leader with deep expertise in functional foods and nutritional product development. A food technologist from CFTRI she has more than 14 years of experience in developing and standardising new products across categories in the F&V, cereal and grain segments. Key categories that she excels in include fruit-based beverages, breakfast cereals, cookies, ready to cook products, jams, culinary pastes, extruded snacks, flaked cereals/grains, noodles, etc.",
-      image: "/images/leaders/nirupama.jpeg",
+      image: "/images/leaders/nirupama.png",
     },
     {
       name: "Bala Jambunathan",
