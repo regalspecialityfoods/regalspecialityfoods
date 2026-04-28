@@ -6,9 +6,15 @@ import ProductCard from "@/components/common/ProductCard/ProductCard";
 import { Col, Row } from "react-bootstrap";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { ArrowRight } from "react-bootstrap-icons";
-import { productCategories } from "@/data/dummy_products";
+import { useData } from "@/context/DataContext";
 
 const ProductsSection = () => {
+  const { productCategories, loading } = useData();
+
+  if (loading) {
+    return <div>Loading products...</div>;
+  }
+
   return (
     <CustomSection className={styles.ProductsSection}>
       <SectionHeading

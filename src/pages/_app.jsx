@@ -11,6 +11,7 @@ import fonts from "@/styles/fonts";
 import { ToastContainer } from "react-toastify";
 import Layout from "@/components/layout/layout";
 import { CartProvider } from "@/context/CartContext";
+import { DataProvider } from "@/context/DataContext";
 import FloatingCartButton from "@/components/cart/FloatingCartButton";
 import CartDrawer from "@/components/cart/CartDrawer";
 
@@ -37,14 +38,16 @@ export default function App({ Component, pageProps }) {
 
   return (
     <main className={`${styles.main}`}>
-      <CartProvider>
-        <Layout>
-          <Component {...pageProps} />
-          <ToastContainer position="bottom-right" />
-        </Layout>
-        <FloatingCartButton />
-        <CartDrawer />
-      </CartProvider>
+      <DataProvider>
+        <CartProvider>
+          <Layout>
+            <Component {...pageProps} />
+            <ToastContainer position="bottom-right" />
+          </Layout>
+          <FloatingCartButton />
+          <CartDrawer />
+        </CartProvider>
+      </DataProvider>
     </main>
   );
 }

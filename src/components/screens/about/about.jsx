@@ -201,8 +201,9 @@ const AboutScreen = () => {
               />
             </div>
             <div className={styles.founderText} data-aos="fade-left">
-              <span className={styles.overline}>MESSAGE FROM THE CEO</span>
               <h2>Ashok Namboodiri</h2>
+              <span className={styles.overline}>Managing Director & CEO
+              </span>
               <p>
                 An accomplished global business leader with 25+ years of
                 experience across Media, Consumer Goods and Sports categories
@@ -230,30 +231,14 @@ const AboutScreen = () => {
               <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
             </div>
             <div className={styles.founderText} data-aos="fade-right">
-              <span className={styles.overline}>WORDS FROM THE FOUNDER</span>
               <h2>Mr. Anantha Krishnan</h2>
-              <p>
-                Regal Specialty Foods began with a simple belief — that good
-                nutrition should be preventive, consistent, and accessible to
-                every family.
-              </p>
-              <p>
-                Growing up with traditional Indian food wisdom and observing how
-                modern lifestyles have shifted away from balance, I felt the
-                need to create products that bridge this gap. Regal is our
-                effort to honour heritage while embracing science, convenience,
-                and today’s evolving routines.
-              </p>
-              <p>
-                This journey is about building trust — with families who choose
-                our products, with partners who grow alongside us, and with
-                every individual who believes that small daily habits create
-                long-term wellbeing.
-              </p>
-              <p className={styles.closing}>
-                &quot;Regal is not built for quick trends. It is built for
-                generations.&quot;
-              </p>
+              <span className={styles.overline}>Founder & Chief Operating Officer
+              </span>
+
+              <p>With over 27 years of leadership experience in the FMCG sector handling brands including Cadbury, Kellogg&apos;s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion. </p>
+
+              <p>He is a strong advocate for talent development, adept at articulating organizational missions and guiding teams to achieve ambitious goals. His strengths lie in strategic planning and effective communication, always pushing boundaries and transforming potential into performance. </p>
+
             </div>
           </div>
         </CustomContainer>
@@ -303,8 +288,46 @@ const AboutScreen = () => {
             })}
 
           </div>
+        </CustomContainer>
+      </section>
 
+      {/* Message from Founder Section */}
+      <section className={styles.founderMessageSection}>
+        <CustomContainer>
+          <div className={styles.messageContent} data-aos="fade-up">
+            <div className={styles.messageImage}>
+              <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
+            </div>
+            <div className={styles.messageText}>
+              {/* <span className={styles.overline}>WORDS FROM THE HEART</span> */}
+              <h2>Message from the founder</h2>
+              <div className={styles.quoteBody}>
+                <p>
+                  Regal Specialty Foods began with a simple belief — that good
+                  nutrition should be preventive, consistent, and accessible to
+                  every family.
+                </p>
+                <p>
+                  Growing up with traditional Indian food wisdom and observing how
+                  modern lifestyles have shifted away from balance, I felt the
+                  need to create products that bridge this gap. Regal is our
+                  effort to honour heritage while embracing science, convenience,
+                  and today’s evolving routines.
+                </p>
+                <p>
+                  This journey is about building trust — with families who choose
+                  our products, with partners who grow alongside us, and with
+                  every individual who believes that small daily habits create
+                  long-term wellbeing.
+                </p>
+              </div>
+              <p className={styles.closing}>
+                &quot;Regal is not built for quick trends. It is built for
+                generations.&quot;
+              </p>
 
+            </div>
+          </div>
         </CustomContainer>
       </section>
     </div>

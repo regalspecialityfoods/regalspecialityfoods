@@ -1,14 +1,15 @@
 import ProductDescriptionScreen from "@/components/screens/product_description/product_description";
 import React from "react";
-import { getproductDetail } from "@/data/dummy_products";
 import { useRouter } from "next/router";
+import { useData } from "@/context/DataContext";
 
 const ProductDetailsPage = () => {
-
   const router = useRouter();
+  const { getproductDetail, loading } = useData();
   const product = getproductDetail(router?.query?.product_id);
 
-  if (!product) return null;
+  if (loading) return <div>Loading...</div>;
+  if (!product) return <div>Product not found</div>;
 
   return <ProductDescriptionScreen product={product} />;
 };

@@ -3,9 +3,15 @@ import styles from "./shop.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image, Row, Col } from "react-bootstrap";
 import ProductCard from "@/components/common/ProductCard/ProductCard";
-import { productCategories } from "@/data/dummy_products";
+import { useData } from "@/context/DataContext";
 
 const ShopScreen = () => {
+  const { productCategories, loading } = useData();
+
+  if (loading) {
+    return <div>Loading products...</div>;
+  }
+
   return (
     <div className={styles.ShopScreen}>
       {/* Hero Section */}
