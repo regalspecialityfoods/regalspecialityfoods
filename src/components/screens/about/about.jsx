@@ -231,7 +231,7 @@ const AboutScreen = () => {
               <Image src="/images/leaders/ananth_1.jpeg" alt="Founder" fluid />
             </div>
             <div className={styles.founderText} data-aos="fade-right">
-              <h2>Mr. Anantha Krishnan</h2>
+              <h2>Anantha Krishnan</h2>
               <span className={styles.overline}>Founder & Chief Operating Officer
               </span>
 
