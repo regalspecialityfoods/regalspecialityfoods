@@ -9,10 +9,10 @@
   font-family: inherit;
 
   section {
-    padding: 120px 0;
+    padding: 80px 0;
 
     @include respond-below(md) {
-      padding: 80px 0;
+      padding: 40px 0;
     }
   }
 
@@ -23,12 +23,12 @@
     color: #2d2d2d;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   .sectionHeader {
     text-align: center;
-    margin-bottom: 70px;
+    margin-top: 70px;
 
     @include respond-below(md) {
       margin-bottom: 40px;
@@ -44,11 +44,11 @@
   }
 
   .sectionTitle {
-    font-family: $font-ChickenRice, sans-serif;
+    font-family: $font-FarmHouse, sans-serif;
     font-size: 40px;
     color: $color-primary1;
     font-weight: 500;
-    letter-spacing: -0.5px;
+    // letter-spacing: -0.5px;
     margin: 0;
 
     @include respond-below(md) {
@@ -57,62 +57,6 @@
   }
 
   /* Hero Section */
-  .heroSection {
-    background-color: #000; // Dark theme hero for impact
-    height: 70vh;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-
-    @include respond-below(md) {
-      height: 50vh;
-    }
-
-    .heroImageBg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.25;
-      }
-    }
-
-    .heroContent {
-      position: relative;
-      z-index: 2;
-
-      h1 {
-        font-family: inherit;
-        font-size: 40px;
-        letter-spacing: 4px;
-        margin-bottom: 25px;
-        color: #fff;
-        text-transform: uppercase;
-        font-weight: 600;
-        opacity: 0.8;
-      }
-
-      img {
-        max-width: 350px;
-        height: auto;
-
-        @include respond-below(md) {
-          max-width: 250px;
-        }
-      }
-    }
-  }
 
   /* Intro Section */
   .introSection {
@@ -358,11 +302,11 @@
 
     .founderText {
       flex: 1.5;
-      background: linear-gradient(rgba(255, 255, 255, 0.7)), url("/images/logo.png");
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.7)), url("/images/logo.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-
 
       h2 {
         font-family: $font-FarmHouse, sans-serif;
@@ -401,8 +345,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
 
-
-
     @include respond-below(md) {
       grid-template-columns: 1fr;
       gap: 50px;
@@ -431,7 +373,6 @@
       border: 2px solid $color-primary1;
       // padding: 24px;
 
-
       @include respond-below(md) {
         flex: 0 0 150px;
         width: 150px;
@@ -443,7 +384,6 @@
         height: 100%;
         object-fit: contain;
         object-position: center;
-
       }
     }
 
@@ -566,7 +506,7 @@
   padding: 120px 0 150px;
 
   .messageContent {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;

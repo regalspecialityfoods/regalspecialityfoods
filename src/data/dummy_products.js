@@ -280,7 +280,7 @@ const productCategories = [
   },
 
   {
-    name: "For Children",
+    name: "For Juniors",
     id: "Children",
     products: [
       {

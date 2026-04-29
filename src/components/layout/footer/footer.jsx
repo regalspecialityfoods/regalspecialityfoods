@@ -7,6 +7,7 @@ import {
   EnvelopeAtFill,
   GeoAltFill,
   TelephoneFill,
+  Whatsapp,
 } from "react-bootstrap-icons";
 import { PAGES } from "@/constants/constants";
 import SocialMedia from "@/components/ui/social_media/social_media";
@@ -15,8 +16,7 @@ import Newsletter from "./newsletter";
 import { useRouter } from "next/router";
 
 const Footer = () => {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const legalPages = [
     {
@@ -34,16 +34,11 @@ const Footer = () => {
     },
   ];
 
-  
-
-  const isLegalPage = legalPages.some(p=> p.href === router.pathname)
-  
+  const isLegalPage = legalPages.some((p) => p.href === router.pathname);
 
   return (
     <>
-      {
-        !isLegalPage && <Newsletter />
-      }
+      {!isLegalPage && <Newsletter />}
       <footer className={styles.Footer}>
         <CustomContainer>
           <div className={styles.top}>
@@ -88,7 +83,19 @@ const Footer = () => {
                     <p>Tamil Nadu | India</p>
                   </div>
                   <div>
-                    <TelephoneFill /> +91 44 7967 3426
+                    <Link href={"tel:+914479673426"}>
+                      <TelephoneFill /> +91 44 7967 3426
+                    </Link>
+                  </div>
+                  <div>
+                    <Link
+                      href={
+                        "https://wa.me/918939028578?text=Hello%2C%20I%20would%20like%20to%20know%20more."
+                      }
+                      target="_blank"
+                    >
+                      <Whatsapp /> +91 89390 28578
+                    </Link>
                   </div>
                   <div>
                     <EnvelopeAtFill />
@@ -101,13 +108,13 @@ const Footer = () => {
             </Row>
           </div>
           <div className={styles.bot}>
-            {
-              legalPages.map((lp)=>{
-               return <Link key={lp.title} href={lp.href}>
-                <p>{lp.title}</p>
-               </Link>
-              })
-            }
+            {legalPages.map((lp) => {
+              return (
+                <Link key={lp.title} href={lp.href}>
+                  <p>{lp.title}</p>
+                </Link>
+              );
+            })}
           </div>
         </CustomContainer>
       </footer>

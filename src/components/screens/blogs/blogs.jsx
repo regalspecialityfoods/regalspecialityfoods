@@ -5,22 +5,14 @@ import { Image, Row, Col } from "react-bootstrap";
 import Link from "next/link";
 import { ArrowRight, PersonCircle } from "react-bootstrap-icons";
 import { dummyBlogs } from "@/data/dummy_blogs";
+import PageBanner from "@/components/common/pageBanner/pageBanner";
 
 const BlogsScreen = () => {
     return (
         <div className={styles.BlogsScreen}>
-            {/* Hero Section */}
-            <section className={styles.heroSection}>
-                <div className={styles.heroImageBg}>
-                    <Image src="/images/brand/hero.png" alt="Blogs Hero" />
-                </div>
-                <CustomContainer>
-                    <div className={styles.heroContent}>
-                        <span className={styles.overline} data-aos="fade-down">Health & Wellness</span>
-                        <h2 data-aos="fade-up" data-aos-delay="100">THE REGAL BLOG</h2>
-                    </div>
-                </CustomContainer>
-            </section>
+            <PageBanner title={'THE REGAL BLOG'}
+            bgImage={'/images/banners/regal_blog.webp'}
+            />
 
             {/* Blogs Listing Section */}
             <section className={styles.listingSection}>

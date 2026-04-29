@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./about.module.scss";
 import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image } from "react-bootstrap";
+import PageBanner from "@/components/common/pageBanner/pageBanner";
 
 const AboutScreen = () => {
   const [expandedLeaders, setExpandedLeaders] = useState({});
@@ -14,6 +15,20 @@ const AboutScreen = () => {
   };
 
   const leaders = [
+    // {
+    //   name: "Ashok Namboodiri",
+    //   designation: "Managing Director & CEO",
+    //   about:
+    //     "Ashok Namboodiri is an accomplished global business leader with 25+ years across Media, Consumer Goods, and Sports. He has driven growth in India, the Middle East, and Africa. He excels at scaling businesses, building teams, launching categories, and expanding globally. Known for sports regionalization and global partnerships, he also mentors future leaders and thrives on new challenges.",
+    //   image: "/images/leaders/ashok.jpeg",
+    // },
+    // {
+    //   name: "Ananthakrishnan Subramanian",
+    //   designation: "Founder & Chief Operating Officer",
+    //   about:
+    //     "Ananthakrishnan Subramanian brings 27+ years of FMCG leadership across brands like Cadbury, Kellogg’s, Coca-Cola, and Tropicana, with deep expertise in sales strategy, distribution, and market expansion. He is a strong advocate for talent development, excelling in strategic planning, clear communication, and guiding teams to achieve ambitious goals while transforming potential into performance.",
+    //   image: "/images/leaders/ananth.jpeg",
+    // },
     {
       name: "Nirupama Srinivasa Desikan",
       designation: "Chief Scientist and Chief Product Officer",
@@ -40,27 +55,10 @@ const AboutScreen = () => {
 
   return (
     <div className={styles.AboutScreen}>
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroImageBg}>
-          <Image
-            src="/images/about_hero_placeholder.png"
-            alt="Regal Specialty Foods Superfoods"
-          />
-        </div>
-        <CustomContainer>
-          <div className={styles.heroContent}>
-            <h1 data-aos="fade-up">ABOUT US</h1>
-            {/* <Image
-              src="/logo/logo_full_w_white.png"
-              alt="logo"
-              width={300}
-              data-aos="fade-up"
-              data-aos-delay="100"
-            /> */}
-          </div>
-        </CustomContainer>
-      </section>
+      <PageBanner
+        bgImage={"/images/banners/about_us.webp"}
+        title={"ABOUT US"}
+      />
 
       {/* Introduction Section */}
       <section className={styles.introSection}>
@@ -189,7 +187,12 @@ const AboutScreen = () => {
         </CustomContainer>
       </section>
 
-      {/* Managing Director & CEO Message Section */}
+      <div className={styles.sectionHeader} data-aos="fade-up">
+        <span className={styles.overline}>STRATEGIC LEADERSHIP</span>
+        <h2 className={styles.sectionTitle}>Leadership Team</h2>
+      </div>
+
+  {/* Managing Director & CEO Message Section */}
       <section className={styles.founderSection}>
         <CustomContainer>
           <div className={styles.founderContent}>
@@ -202,8 +205,7 @@ const AboutScreen = () => {
             </div>
             <div className={styles.founderText} data-aos="fade-left">
               <h2>Ashok Namboodiri</h2>
-              <span className={styles.overline}>Managing Director & CEO
-              </span>
+              <span className={styles.overline}>Managing Director & CEO</span>
               <p>
                 An accomplished global business leader with 25+ years of
                 experience across Media, Consumer Goods and Sports categories
@@ -232,13 +234,24 @@ const AboutScreen = () => {
             </div>
             <div className={styles.founderText} data-aos="fade-right">
               <h2>Ananthakrishnan Subramanian</h2>
-              <span className={styles.overline}>Founder & Chief Operating Officer
+              <span className={styles.overline}>
+                Founder & Chief Operating Officer
               </span>
 
-              <p>With over 27 years of leadership experience in the FMCG sector handling brands including Cadbury, Kellogg&apos;s, Coca-Cola, and Tropicana, he brings deep expertise in sales strategy, distribution, and market expansion. </p>
+              <p>
+                With over 27 years of leadership experience in the FMCG sector
+                handling brands including Cadbury, Kellogg&apos;s, Coca-Cola,
+                and Tropicana, he brings deep expertise in sales strategy,
+                distribution, and market expansion.
+              </p>
 
-              <p>He is a strong advocate for talent development, adept at articulating organizational missions and guiding teams to achieve ambitious goals. His strengths lie in strategic planning and effective communication, always pushing boundaries and transforming potential into performance. </p>
-
+              <p>
+                He is a strong advocate for talent development, adept at
+                articulating organizational missions and guiding teams to
+                achieve ambitious goals. His strengths lie in strategic planning
+                and effective communication, always pushing boundaries and
+                transforming potential into performance.
+              </p>
             </div>
           </div>
         </CustomContainer>
@@ -247,10 +260,6 @@ const AboutScreen = () => {
       {/* Leadership & Advisory Section */}
       <section className={styles.teamSection}>
         <CustomContainer>
-          <div className={styles.sectionHeader} data-aos="fade-up">
-            <span className={styles.overline}>STRATEGIC LEADERSHIP</span>
-            <h2 className={styles.sectionTitle}>Leadership Team</h2>
-          </div>
           <div className={styles.teamGrid}>
             {leaders.map((leader, idx) => {
               return (
@@ -271,8 +280,9 @@ const AboutScreen = () => {
                     <h3>{leader.name}</h3>
                     <p className={styles.role}>{leader.designation}</p>
                     <p
-                      className={`${styles.bio} ${!expandedLeaders[leader.name] ? styles.truncated : ""
-                        }`}
+                      className={`${styles.bio} ${
+                        !expandedLeaders[leader.name] ? styles.truncated : ""
+                      }`}
                     >
                       {leader.about}
                     </p>
@@ -286,7 +296,6 @@ const AboutScreen = () => {
                 </div>
               );
             })}
-
           </div>
         </CustomContainer>
       </section>
@@ -308,24 +317,23 @@ const AboutScreen = () => {
                   every family.
                 </p>
                 <p>
-                  Growing up with traditional Indian food wisdom and observing how
-                  modern lifestyles have shifted away from balance, I felt the
-                  need to create products that bridge this gap. Regal is our
-                  effort to honour heritage while embracing science, convenience,
-                  and today’s evolving routines.
+                  Growing up with traditional Indian food wisdom and observing
+                  how modern lifestyles have shifted away from balance, I felt
+                  the need to create products that bridge this gap. Regal is our
+                  effort to honour heritage while embracing science,
+                  convenience, and today’s evolving routines.
                 </p>
                 <p>
-                  This journey is about building trust — with families who choose
-                  our products, with partners who grow alongside us, and with
-                  every individual who believes that small daily habits create
-                  long-term wellbeing.
+                  This journey is about building trust — with families who
+                  choose our products, with partners who grow alongside us, and
+                  with every individual who believes that small daily habits
+                  create long-term wellbeing.
                 </p>
               </div>
               <p className={styles.closing}>
                 &quot;Regal is not built for quick trends. It is built for
                 generations.&quot;
               </p>
-
             </div>
           </div>
         </CustomContainer>

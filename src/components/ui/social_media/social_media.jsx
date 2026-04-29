@@ -9,7 +9,7 @@ const SocialMedia = () => {
     <div className={styles.social}>
       {SOCIAL_MEDIA.map((sm) => {
         return (
-          <Link href={sm.href} key={sm.name}>
+          <Link href={sm.href} key={sm.name} target="_blank">
             <Image src={sm.icon} alt={sm.name} width={30} />
           </Link>
         );

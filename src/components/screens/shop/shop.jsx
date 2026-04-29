@@ -4,6 +4,7 @@ import CustomContainer from "@/components/ui/custom_container/custom_container";
 import { Image, Row, Col } from "react-bootstrap";
 import ProductCard from "@/components/common/ProductCard/ProductCard";
 import { useData } from "@/context/DataContext";
+import PageBanner from "@/components/common/pageBanner/pageBanner";
 
 const ShopScreen = () => {
   const { productCategories, loading } = useData();
@@ -15,21 +16,7 @@ const ShopScreen = () => {
   return (
     <div className={styles.ShopScreen}>
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroImageBg}>
-          <Image src="/images/shop/hero.png" alt="Shop Hero" />
-        </div>
-        <CustomContainer>
-          <div className={styles.heroContent}>
-            <div className={styles.logoBox} data-aos="fade-down">
-              <Image src="/images/logo.png" alt="Regal Specialty Foods" />
-            </div>
-            <h2 data-aos="fade-up" data-aos-delay="100">
-              SHOP
-            </h2>
-          </div>
-        </CustomContainer>
-      </section>
+      <PageBanner bgImage={"/images/banners/shop.webp"} title={"SHOP"} />
 
       {/* Product Categorization */}
       {productCategories.map((category, index) => (

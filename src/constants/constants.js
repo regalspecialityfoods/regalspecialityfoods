@@ -31,7 +31,6 @@ export const PAGES = [
     name: "Work With Us",
     href: "/work-with-us",
   },
-
 ];
 
 export const SOCIAL_MEDIA = [
@@ -46,8 +45,8 @@ export const SOCIAL_MEDIA = [
     href: "/",
   },
   {
-    icon: "/images/social_media_icons/x.png",
-    name: "X",
-    href: "/",
+    icon: "/images/social_media_icons/linkedin.png",
+    name: "Linkedin",
+    href: "https://www.linkedin.com/company/regal-specialty-foods/",
   },
 ];
