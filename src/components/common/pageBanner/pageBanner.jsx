@@ -3,10 +3,10 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import styles from "./pageBanner.module.scss";
 
-const PageBanner = ({ bgImage, title }) => {
+const PageBanner = ({ bgImage, title, smBgPosition = "center" }) => {
   return (
     <section
-      className={styles.heroSection}
+      className={`${styles.heroSection} ${styles[`smBgPos_${smBgPosition}`]}`}
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35)), url('${bgImage}')`,
       }}
