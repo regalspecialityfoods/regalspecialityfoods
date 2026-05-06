@@ -14,11 +14,12 @@ const ProductDescriptionScreen = ({ product }) => {
   const discount =
     selectedSize.originalPrice > selectedSize.currentPrice
       ? Math.round(
-          ((selectedSize.originalPrice - selectedSize.currentPrice) /
-            selectedSize.originalPrice) *
-            100,
-        )
+        ((selectedSize.originalPrice - selectedSize.currentPrice) /
+          selectedSize.originalPrice) *
+        100,
+      )
       : 0;
+
 
   const getStockClass = () => {
     if (product.availability === "In Stock") {
@@ -97,9 +98,8 @@ const ProductDescriptionScreen = ({ product }) => {
                 {product.sizes.map((size, i) => (
                   <button
                     key={i}
-                    className={`${styles.sizeBtn} ${
-                      selectedSize.label === size.label ? styles.activeSize : ""
-                    }`}
+                    className={`${styles.sizeBtn} ${selectedSize.label === size.label ? styles.activeSize : ""
+                      }`}
                     onClick={() => setSelectedSize(size)}
                   >
                     {size.label}
@@ -204,6 +204,7 @@ const ProductDescriptionScreen = ({ product }) => {
               <div>
                 <h5>Hot Preparation</h5>
                 <p>{product.preparation.hot}</p>
+                {/* <p>Add to warm milk and stir until smooth.</p> */}
               </div>
               <div>
                 <h5>Cold Preparation</h5>

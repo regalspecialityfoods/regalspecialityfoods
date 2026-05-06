@@ -8,6 +8,7 @@ const ProductDetailsPage = () => {
   const { getproductDetail, loading } = useData();
   const product = getproductDetail(router?.query?.product_id);
 
+
   if (loading) return <div>Loading...</div>;
   if (!product) return <div>Product not found</div>;
 

@@ -52,7 +52,11 @@ export const DataProvider = ({ children }) => {
                             originalPrice: v.original_price,
                             currentPrice: v.current_price,
                             maxPerOrder: v.max_per_order
-                        }))
+                        })),
+                        key_benefits: p.key_benefits,
+                        ingredients: p.ingredients,
+                        nutritionalHighlights: p.nutritional_highlights,
+                        preparation: p.preparation,
                     }))
             }));
 
