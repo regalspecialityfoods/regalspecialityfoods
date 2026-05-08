@@ -76,7 +76,7 @@ const Footer = () => {
                   <div>
                     <GeoAltFill />
                     <b>Regal Specialty Foods & Beverages India Pvt Ltd</b>
-                    {/* <p>CIN U46309TN2026PTC190729</p> */}
+                    <p>CIN U46309TN2026PTC190729</p>
                     <p>Regd Office :  Sri Sastha I Floor,</p>
                     <p>31A Alamelumangapuram II Cross,</p>
                     <p> Madipakkam,</p>
